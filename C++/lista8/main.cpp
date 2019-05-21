@@ -16,7 +16,7 @@ int main() {
     catch (exception &e){
         cerr << e.what() << endl;
     }
-    cout << "lmao";
+    cout << "test";
     delete xd;
     delete xdd;
 }
