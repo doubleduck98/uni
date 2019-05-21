@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/bst.h
+iostream
+-
+stdexcept
+-
+algorithm
+-
+
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/main.cpp
+iostream
+-
+bst.h
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/bst.h
+

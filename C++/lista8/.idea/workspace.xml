@@ -38,9 +38,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="1381" />
-    <option name="width" value="1179" />
+    <option name="width" value="1169" />
     <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
@@ -63,6 +63,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -109,10 +110,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17676000" />
+    <option name="totallyTimeSpent" value="17784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1381" y="0" width="1179" height="1044" extended-state="5" />
+    <frame x="1381" y="0" width="1179" height="1044" extended-state="4" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1934339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
