@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/STUDIA/C++/lista7/main.cpp
+iostream
+-
+wymierna.h
+D:/STUDIA/C++/lista7/wymierna.h
+
+D:/STUDIA/C++/lista7/wyjatki_wymierne.h
+exception
+-
+
+D:/STUDIA/C++/lista7/wymierna.cpp
+wymierna.h
+D:/STUDIA/C++/lista7/wymierna.h
+numeric
+-
+map
+-
+
+D:/STUDIA/C++/lista7/wymierna.h
+iostream
+-
+wyjatki_wymierne.h
+D:/STUDIA/C++/lista7/wyjatki_wymierne.h
+
