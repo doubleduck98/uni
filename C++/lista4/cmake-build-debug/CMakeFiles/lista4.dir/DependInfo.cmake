@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/STUDIA/C++/lista4/kolejka.cpp" "D:/STUDIA/C++/lista4/cmake-build-debug/CMakeFiles/lista4.dir/kolejka.cpp.obj"
-  "D:/STUDIA/C++/lista4/main.cpp" "D:/STUDIA/C++/lista4/cmake-build-debug/CMakeFiles/lista4.dir/main.cpp.obj"
+  "/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/kolejka.cpp" "/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/cmake-build-debug/CMakeFiles/lista4.dir/kolejka.cpp.o"
+  "/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/main.cpp" "/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/cmake-build-debug/CMakeFiles/lista4.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

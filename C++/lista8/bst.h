@@ -34,13 +34,6 @@ private:
         }
     } *node = nullptr;
 
-    void kopiuj(const Node *from, Node *to) {
-        if (from != nullptr) {
-            to = new Node();
-            copy_n(from, 1, to);
-        }
-    }
-
     void dodajxd(T value, Node *cnode) {
         if (cnode->key >= value) {
             if (cnode->left == nullptr)
@@ -55,19 +48,47 @@ private:
         }
     }
 
-    void usunxd(T value, Node *cnode) {
-        if (cnode->key == value) {
+    Node *minKey(Node *cnode) {
+        Node *curr = cnode;
+        while (curr && curr->left != nullptr)
+            curr = curr->left;
 
-        }
+        return curr;
     }
+
+    Node *usunxd(T value, Node *cnode) {
+        if (cnode == nullptr) return cnode;
+        if (value < cnode->key)
+            cnode->left = usunxd(value, cnode->left);
+        else if (value > cnode->key)
+            cnode->right = usunxd(value, cnode->right);
+        else {
+            if (cnode->left == nullptr) {
+                Node *temp = cnode->right;
+                cnode->right = nullptr;
+                delete cnode;
+                return temp;
+            } else if (cnode->right == nullptr) {
+                Node *temp = cnode->left;
+                cnode->left = nullptr;
+                delete cnode;
+                return temp;
+            }
+            Node *temp = minKey(cnode->right);
+            cnode->key = temp->key;
+            cnode->right = usunxd(temp->key, cnode->right);
+        }
+        return cnode;
+    }
+
 
     T znajdzxd(T value, Node *cnode) {
         if (cnode == nullptr)
             throw invalid_argument("nie ma takiej wartosci w drzewie");
-        else if (cnode->key == value)
-            return cnode->key;
         else if (value < cnode->key)
             znajdzxd(value, cnode->left);
+        else if (cnode->key == value)
+            return cnode->key;
         else
             znajdzxd(value, cnode->right);
     }
@@ -90,14 +111,14 @@ public:
     }
 
     bst<T>(const bst<T> &drzewo) {
-        if(drzewo.node != nullptr) {
+        if (drzewo.node != nullptr) {
             this->node = new Node();
             copy_n(drzewo.node, 1, this->node);
         }
     }
 
     bst<T> &operator=(const bst<T> &drzewo) {
-        if(drzewo.node != nullptr) {
+        if (drzewo.node != nullptr) {
             this->node = new Node();
             copy_n(drzewo.node, 1, this->node);
         }
@@ -115,9 +136,9 @@ public:
             dodajxd(value, this->node);
     }
 
-    void usunWezel(T value) {
+    Node *usunWezel(T value) {
         if (this->node == nullptr)
-            throw invalid_argument("drzewo jestt puste");
+            throw invalid_argument("drzewo jest puste");
         else
             usunxd(value, this->node);
     }

@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lista4.dir/main.cpp.obj"
-  "CMakeFiles/lista4.dir/kolejka.cpp.obj"
+  "CMakeFiles/lista4.dir/main.cpp.o"
+  "CMakeFiles/lista4.dir/kolejka.cpp.o"
   "lista4.pdb"
-  "lista4.exe"
-  "lista4.exe.manifest"
-  "liblista4.dll.a"
+  "lista4"
 )
 
 # Per-language clean rules from dependency scanning.
