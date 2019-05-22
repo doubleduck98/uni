@@ -11,7 +11,43 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0d3b2ab-8858-4937-9b64-b670ec971f2d" name="Default Changelist" comment="" />
+    <list default="true" id="c0d3b2ab-8858-4937-9b64-b670ec971f2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/bst.h" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/bst.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/CMakeFiles/lista8.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/lista8.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/lista8.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/cmake-build-debug/lista8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/cmake-build-debug/lista8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lista8/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../lista8/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wymierna.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2273">
-              <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+            <state relative-caret-position="488">
+              <caret line="161" column="58" lean-forward="true" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="58" />
               <folding>
                 <element signature="e#42#63#0" expanded="true" />
               </folding>
@@ -60,11 +96,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wymierna.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-73">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="170">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="78" />
               <folding>
                 <element signature="e#95#114#0" expanded="true" />
               </folding>
@@ -73,6 +109,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -90,6 +129,7 @@
     <option name="width" value="1335" />
     <option name="height" value="950" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -152,17 +192,19 @@
       <workItem from="1558349818314" duration="17000" />
       <workItem from="1558349964602" duration="883000" />
       <workItem from="1558435719668" duration="872000" />
+      <workItem from="1558531338596" duration="8000" />
+      <workItem from="1558531426161" duration="398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11534000" />
+    <option name="totallyTimeSpent" value="11940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16107382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -226,19 +268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wyjatki_wymierne.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wymierna.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2273">
-          <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
-          <folding>
-            <element signature="e#42#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -249,12 +278,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wyjatki_wymierne.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/wymierna.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="170">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="78" />
           <folding>
             <element signature="e#95#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wymierna.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="161" column="58" lean-forward="true" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="58" />
+          <folding>
+            <element signature="e#42#63#0" expanded="true" />
           </folding>
         </state>
       </provider>

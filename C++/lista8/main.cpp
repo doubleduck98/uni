@@ -5,14 +5,21 @@
 using namespace std;
 
 int main() {
-    auto *xd = new bst<int>({});
+    auto *xd = new bst<int>({7, 2, 5, 4, 1, 19});
+    xd->wypisz();
+    //auto *xdd = new bst<int>(*xd);
+    cout << endl;
+    xd->usunWezel(7);
+    xd->usunWezel(4);
+    xd->wypisz();
+    //xdd->wypisz();
     bool test = true;
     char comm;
     int param;
     cout << "puste drzewo binarnych poszukiwan" << endl;
     cout << "domyslna wartoscia przechowywana w drzewie jest int" << endl;
     cout << "wpisz h aby uzyskac pomoc: " << endl;
-    while (test) {
+    while (false) {
         cin >> comm;
         if (comm == 104) {
             cout << "polecenie, ew. parametr" << endl
