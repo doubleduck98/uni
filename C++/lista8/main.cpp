@@ -1,31 +1,28 @@
 #include <iostream>
-#include <vector>
 #include "bst.h"
 
 using namespace std;
 
 int main() {
     auto *xd = new bst<int>({7, 2, 5, 4, 1, 19});
-    xd->wypisz();
-    //auto *xdd = new bst<int>(*xd);
-    cout << endl;
+    cout << xd << endl;
     xd->usunWezel(7);
     xd->usunWezel(4);
-    xd->wypisz();
-    //xdd->wypisz();
+    cout << xd << endl;
     bool test = true;
     char comm;
     int param;
     cout << "puste drzewo binarnych poszukiwan" << endl;
     cout << "domyslna wartoscia przechowywana w drzewie jest int" << endl;
     cout << "wpisz h aby uzyskac pomoc: " << endl;
-    while (false) {
+    while (test) {
         cin >> comm;
         if (comm == 104) {
             cout << "polecenie, ew. parametr" << endl
                  << "b - nowa kolejka" << endl
                  << "p <int> - wsadz element" << endl
                  << "d <int> - usun element" << endl
+                 << "f <int> - sprawdz, czy element jest w drzewie" << endl
                  << "a - wypisz wszystkie elementy" << endl
                  << "h - pomoc"
                  << "x - zakoncz" << endl;
@@ -51,24 +48,26 @@ int main() {
                         cerr << e.what() << endl;
                     }
                     break;
+                case 102: //f
+                    cin >> param;
+                    cout << (xd->znajdzWezel(param) ? "znaleziono wartosc " + to_string(param)
+                                                    : "nie ma takiej wartosci w drzewie") << endl;
+                    break;
                 case 97: //a
-                    try {
-                        xd->wypisz();
-                    }
-                    catch (exception &e) {
-                        cerr << e.what() << endl;
-                    }
+                    cout << xd << endl;
                     break;
                 case 104: //h
                     cout << "polecenie, ew. parametr" << endl
                          << "b <ciag intow> - nowa kolejka" << endl
                          << "p <int> - wsadz element" << endl
                          << "d <int> - usun element" << endl
+                         << "f <int> - sprawdz, czy element jest w drzewie" << endl
                          << "a - wypisz wszystkie elementy" << endl
                          << "h - pomoc"
                          << "x - zakoncz" << endl;
                     break;
                 case 120: //x
+                    cout << "zamkniecie programu" << endl;
                     test = false;
                     break;
                 default:

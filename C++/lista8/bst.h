@@ -43,21 +43,6 @@ private:
             kopiujxd(from->right, to->right);
     }
 
-    //metoda pomocnicza do dodawania wierzchołka
-    void dodajxd(T value, Node *cnode) {
-        if (cnode->key >= value) {
-            if (cnode->left == nullptr)
-                cnode->left = new Node(value);
-            else
-                dodajxd(value, cnode->left);
-        } else {
-            if (cnode->right == nullptr)
-                cnode->right = new Node(value);
-            else
-                dodajxd(value, cnode->right);
-        }
-    }
-
     //metoda pomocnicza do znajdywania najmniejszej wartosci w poddrzewie
     Node *minKey(Node *cnode) {
         Node *curr = cnode;
@@ -68,6 +53,7 @@ private:
     }
 
     //metoda pomocnicza do usuwania wierzchołka
+    //znajdujemy nastepnik w poddrzewie, kopiujemy wartosc do wezla i usuwamy zastepce
     Node *usunxd(T value, Node *cnode) {
         if (cnode == nullptr)
             throw invalid_argument("nie ma takiej wartosci w drzewie");
@@ -94,22 +80,11 @@ private:
         return cnode;
     }
 
-    //metoda pomocnicza do znajdywania wierzchołka
-    bool znajdzxd(T value, Node *cnode) {
-        if (cnode == nullptr)
-            throw invalid_argument("nie ma takiej wartosci w drzewie");
-        else if (value < cnode->key)
-            znajdzxd(value, cnode->left);
-        else if (cnode->key == value)
-            return true;
-        else
-            znajdzxd(value, cnode->right);
-    }
-
     //metoda pomocnicza do wypisywania
-    ostream wypiszxd(ostream &wyj, Node *cnode) {
-        return wyj << cnode->left == nullptr ? wypiszxd(wyj, cnode->left) : ""
-        << cnode->key << cnode->right == nullptr ? wypiszxd(wyj, cnode->right) : "";
+    string wypiszxd(const Node *cnode) const {
+        return ((cnode->left != nullptr) ? wypiszxd(cnode->left) : "")
+               + to_string(cnode->key)
+               + " " + ((cnode->right != nullptr) ? wypiszxd(cnode->right) : "");
     }
 
 public:
@@ -158,10 +133,26 @@ public:
 
     //metoda dodawania
     void dodajWezel(T value) {
-        if (this->node == nullptr)
+        if (this->node == nullptr) {
             this->node = new Node(value);
-        else
-            dodajxd(value, this->node);
+            return;
+        }
+        Node *cnode = this->node;
+        while (true) {
+            if (cnode->key >= value) {
+                if (cnode->left == nullptr) {
+                    cnode->left = new Node(value);
+                    return;
+                } else
+                    cnode = cnode->left;
+            } else {
+                if (cnode->right == nullptr) {
+                    cnode->right = new Node(value);
+                    return;
+                } else
+                    cnode = cnode->right;
+            }
+        }
     }
 
     //metoda usuwania
@@ -174,23 +165,31 @@ public:
 
     //metoda znajdowania
     bool znajdzWezel(T value) {
-        return znajdzxd(value, this->node);
+        Node *cnode = this->node;
+        while (cnode != nullptr) {
+            if (cnode->key == value)
+                return true;
+            else if (cnode->key > value)
+                cnode = cnode->left;
+            else
+                cnode = cnode->right;
+        }
+        return false;
     }
 
-    //todo:operator strumieniowy
-    void wypisz() {
-        if (this->node == nullptr)
-            cout << "drzewo jest puste";
-        else
-            wypiszxd(this->node);
-        cout << endl;
-    }
-
+    //strumienie wypisywania dla referencji i wskaźnika
     friend ostream &operator<<(ostream &wyj, const bst<T> &bst) {
         if (bst.node == nullptr)
             return wyj << "drzewo jest puste";
         else
-            return wypiszxd(wyj, bst.node)
+            return wyj << bst.wypiszxd(bst.node);
+    }
+
+    friend ostream &operator<<(ostream &wyj, const bst <T> *bst) {
+        if (bst->node == nullptr)
+            return wyj << "drzewo jest puste";
+        else
+            return wyj << bst->wypiszxd(bst->node);
     }
 };
 

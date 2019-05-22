@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/STUDIA/C++/lista8/bst.h
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/bst.h
 iostream
 -
 stdexcept
@@ -14,11 +14,9 @@ stdexcept
 algorithm
 -
 
-D:/STUDIA/C++/lista8/main.cpp
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/main.cpp
 iostream
 -
-vector
--
 bst.h
-D:/STUDIA/C++/lista8/bst.h
+/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/bst.h
 
