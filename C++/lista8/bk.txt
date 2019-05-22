@@ -1,0 +1,78 @@
+h
+p 20
+p 15
+p 7
+p 22
+d 5
+f 12
+p 13
+a
+f 55
+p 4
+d 2
+d 7
+p 19
+a
+d 17
+b
+a
+b
+p 55
+p 123
+p 13
+p 64
+f 123
+f 13
+d 9
+p 9
+a
+d 9
+b
+d 64
+d 15
+p 12
+a
+x
+
+1 2 4 5 7 19 
+1 2 5 19 
+puste drzewo binarnych poszukiwan
+domyslna wartoscia przechowywana w drzewie jest int
+wpisz h aby uzyskac pomoc: 
+polecenie, ew. parametr
+b - nowa kolejka
+p <int> - wsadz element
+d <int> - usun element
+f <int> - sprawdz, czy element jest w drzewie
+a - wypisz wszystkie elementy
+h - pomocx - zakoncz
+wsadzono element 20
+wsadzono element 15
+wsadzono element 7
+wsadzono element 22
+usunieto element 5
+nie ma takiej wartosci w drzewie
+wsadzono element 13
+1 2 7 13 15 19 20 22 
+nie ma takiej wartosci w drzewie
+wsadzono element 4
+usunieto element 2
+usunieto element 7
+wsadzono element 19
+1 4 13 15 19 19 20 22 
+utworzono nowe bst
+drzewo jest puste
+utworzono nowe bst
+wsadzono element 55
+wsadzono element 123
+wsadzono element 13
+wsadzono element 64
+znaleziono wartosc 123
+znaleziono wartosc 13
+wsadzono element 9
+9 13 55 64 123 
+usunieto element 9
+utworzono nowe bst
+wsadzono element 12
+12 
+zamkniecie programu
