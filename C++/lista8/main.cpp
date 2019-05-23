@@ -5,10 +5,10 @@ using namespace std;
 
 int main() {
     auto *xd = new bst<int>({7, 2, 5, 4, 1, 19});
-    cout << xd << endl;
+    cout << *xd << endl;
     xd->usunWezel(7);
     xd->usunWezel(4);
-    cout << xd << endl;
+    cout << *xd << endl;
     bool test = true;
     char comm;
     int param;
@@ -54,7 +54,7 @@ int main() {
                                                     : "nie ma takiej wartosci w drzewie") << endl;
                     break;
                 case 97: //a
-                    cout << xd << endl;
+                    cout << *xd << endl;
                     break;
                 case 104: //h
                     cout << "polecenie, ew. parametr" << endl
