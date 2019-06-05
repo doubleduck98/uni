@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" X:\Studia\C++\lista8
+=======
+D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\STUDIA\C++\lista8
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 -- The C compiler identification is GNU 8.2.0
 -- The CXX compiler identification is GNU 8.2.0
 -- Check for working C compiler: C:/MinGW/bin/gcc.exe
@@ -15,4 +19,8 @@ S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUI
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
+<<<<<<< HEAD
 -- Build files have been written to: X:/Studia/C++/lista8/cmake-build-debug
+=======
+-- Build files have been written to: D:/STUDIA/C++/lista8/cmake-build-debug
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: X:/Studia/C++/lista8
+=======
+# Install script for directory: D:/STUDIA/C++/lista8
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +44,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "X:/Studia/C++/lista8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "D:/STUDIA/C++/lista8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

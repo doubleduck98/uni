@@ -32,6 +32,12 @@ private:
             delete left;
             delete right;
         }
+
+        friend ostream &operator<<(ostream &wyj, const Node *node) {
+            if (node == nullptr)
+                return wyj << "";
+            return wyj << node->left << node->key << " " << node->right;
+        }
     } *node = nullptr;
 
     //todo:nie działa
@@ -80,12 +86,6 @@ private:
         return cnode;
     }
 
-    //metoda pomocnicza do wypisywania
-    string wypiszxd(const Node *cnode) const {
-        return ((cnode->left != nullptr) ? wypiszxd(cnode->left) : "")
-               + to_string(cnode->key)
-               + " " + ((cnode->right != nullptr) ? wypiszxd(cnode->right) : "");
-    }
 
 public:
     bst() = default;
@@ -99,13 +99,7 @@ public:
 
     //konstruktor kopiujacy todo:nie działa
     bst<T>(const bst<T> &drzewo) {
-        delete this->node;
-        this->node = new Node();
-        copy(drzewo.node, drzewo.node + sizeof(Node), this->node);
-        if (this->node->left != nullptr)
-            kopiujxd(drzewo.node->left, this->node->left);
-        if (this->node->right != nullptr)
-            kopiujxd(drzewo.node->right, this->node->right);
+
     }
 
     //konstruktor przenoszący
@@ -160,7 +154,7 @@ public:
         if (this->node == nullptr)
             throw invalid_argument("drzewo jest puste");
         else
-            usunxd(value, this->node);
+            node = usunxd(value, this->node);
     }
 
     //metoda znajdowania
@@ -182,14 +176,7 @@ public:
         if (bst.node == nullptr)
             return wyj << "drzewo jest puste";
         else
-            return wyj << bst.wypiszxd(bst.node);
-    }
-
-    friend ostream &operator<<(ostream &wyj, const bst <T> *bst) {
-        if (bst->node == nullptr)
-            return wyj << "drzewo jest puste";
-        else
-            return wyj << bst->wypiszxd(bst->node);
+            return wyj << bst.node;
     }
 };
 

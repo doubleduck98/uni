@@ -38,19 +38,33 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe
 
 # The command to remove a file.
 RM = S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E remove -f
+=======
+CMAKE_COMMAND = D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe
+
+# The command to remove a file.
+RM = D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E remove -f
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = X:\Studia\C++\lista8
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = X:\Studia\C++\lista8\cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = D:\STUDIA\C++\lista8
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = D:\STUDIA\C++\lista8\cmake-build-debug
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +72,11 @@ CMAKE_BINARY_DIR = X:\Studia\C++\lista8\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+=======
+	D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +87,11 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +101,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start X:\Studia\C++\lista8\cmake-build-debug\CMakeFiles X:\Studia\C++\lista8\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start X:\Studia\C++\lista8\cmake-build-debug\CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\STUDIA\C++\lista8\cmake-build-debug\CMakeFiles D:\STUDIA\C++\lista8\cmake-build-debug\CMakeFiles\progress.marks
+	$(MAKE) -f CMakeFiles\Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\STUDIA\C++\lista8\cmake-build-debug\CMakeFiles 0
+>>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
 .PHONY : all
 
 # The main clean target
