@@ -8,3 +8,10 @@ PO/
 RPiS/
 test/
 WWW/
+
+#cmake
+compile_commands.json
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
