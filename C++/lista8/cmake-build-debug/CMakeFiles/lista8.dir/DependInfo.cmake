@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/main.cpp" "/mnt/01CE8F7A5089BFF0/Studia/C++/lista8/cmake-build-debug/CMakeFiles/lista8.dir/main.cpp.o"
+  "X:/Studia/C++/lista8/main.cpp" "X:/Studia/C++/lista8/cmake-build-debug/CMakeFiles/lista8.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
