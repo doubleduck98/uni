@@ -8,6 +8,7 @@ PO/
 RPiS/
 test/
 WWW/
+Python/
 
 #cmake
 compile_commands.json
