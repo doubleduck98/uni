@@ -8,6 +8,6 @@ def main():
             n += 1
             kwota -= nominaly[k]
         if n != 0:
-            print(f'{n} x {nominaly[k]}')        
+            print(n, ' x ', nominaly[k])        
 
 main()
