@@ -8,7 +8,9 @@ PO/
 RPiS/
 test/
 WWW/
-PF/
+pf/
+rust/
+
 
 #cmake
 compile_commands.json
