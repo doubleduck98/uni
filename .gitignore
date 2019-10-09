@@ -1,3 +1,4 @@
+#moje
 AiSD/
 ANL/
 ASK/
@@ -10,7 +11,7 @@ test/
 WWW/
 pf/
 rust/
-
+weppo/
 
 #cmake
 compile_commands.json
