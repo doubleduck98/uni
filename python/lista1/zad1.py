@@ -2,7 +2,7 @@ zakupy = [0.2, 0.5, 4.59, 6]
 
 def vat_faktura(lista):
     suma = .23 * sum(lista)
-    print(suma)
+    print(suma) 
     return suma
 
 def vat_paragon(lista):

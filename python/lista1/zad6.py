@@ -1,19 +1,4 @@
-def tabliczka1(x1, x2, y1, y2):
-    if x1 > x2:
-        x1, x2 = x2, x1
-    if y1 > y2:
-        y1, y2 = y2, y1
-    print(" ", end="\t")
-    for x in range(x1, x2 + 1):
-        print(x, end="\t")
-    print("\n")
-    for y in range (y1, y2 + 1):
-        print(y, end="\t")
-        for x in range(x1, x2 + 1):
-            print(x*y, end="\t")
-        print("\n")
-
-def tabliczka2(x1, x2, y1, y2):
+def tabliczka(x1, x2, y1, y2):
     if x1 > x2:
         x1, x2 = x2, x1
     if y1 > y2:
@@ -36,5 +21,4 @@ def tabliczka2(x1, x2, y1, y2):
 
 
 liczby = (input("Podaj 4 liczby: ").split())
-tabliczka2(int(liczby[0]), int(liczby[1]), int(liczby[2]), int(liczby[3]))
-#tabliczka2(int(liczby[0]), int(liczby[1]), int(liczby[2]), int(liczby[3]))
+tabliczka(int(liczby[0]), int(liczby[1]), int(liczby[2]), int(liczby[3]))
