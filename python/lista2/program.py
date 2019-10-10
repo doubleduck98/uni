@@ -117,5 +117,5 @@ print(
     Implikacja(
         Zmienna('x'),
         F()
-    ).oblicz([('x', 0)])
+    ).oblicz([('x', 1)])
 )
