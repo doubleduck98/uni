@@ -21,7 +21,7 @@ class Formula:
 
 
 class T(Formula):
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return True
 
     def __str__(self):
@@ -29,7 +29,7 @@ class T(Formula):
 
 
 class F(Formula):
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return False
 
     def __str__(self):
@@ -42,7 +42,7 @@ class Zmienna(Formula):
     def __init__(self, nazwa_zmiennej):
         self.nazwa = nazwa_zmiennej
 
-    def oblicz(self, zmienne):
+    def oblicz(self, zmienne={}):
         if self.nazwa not in zmienne:
             raise Exception(
                 f'Nie znaleziono zmiennej {self.nazwa} w liście zmiennych.')
@@ -56,7 +56,7 @@ class Negacja(Formula):
     def __init__(self, formula):
         self.formula = formula
 
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return not self.formula.oblicz(zmienne)
 
     def __str__(self):
@@ -68,7 +68,7 @@ class Koniunkcja(Formula):
         self.f1 = formula1
         self.f2 = formula2
 
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return self.f1.oblicz(zmienne) and self.f2.oblicz(zmienne)
 
     def __str__(self):
@@ -80,7 +80,7 @@ class Alternatywa(Formula):
         self.f1 = formula1
         self.f2 = formula2
 
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return self.f1.oblicz(zmienne) or self.f2.oblicz(zmienne)
 
     def __str__(self):
@@ -92,7 +92,7 @@ class Implikacja(Formula):
         self.f1 = formula1
         self.f2 = formula2
 
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return not(self.f1.oblicz(zmienne)) or self.f2.oblicz(zmienne)
 
     def __str__(self):
@@ -104,7 +104,7 @@ class Rownowaznosc(Formula):
         self.f1 = formula1
         self.f2 = formula2
 
-    def oblicz(self, zmienne=[]):
+    def oblicz(self, zmienne={}):
         return self.f1.oblicz(zmienne) == self.f2.oblicz(zmienne)
 
     def __str__(self):
