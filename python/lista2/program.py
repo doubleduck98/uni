@@ -1,32 +1,40 @@
+from itertools import permutations
+
+
 class Formula:
-    def __init__(self):
-        pass
+    def zmienne(self, zbior_zmiennych=set()):
+        if isinstance(self, Zmienna):
+            zbior_zmiennych.add(self.nazwa)
+            return zbior_zmiennych
+        elif isinstance(self, (T, F)):
+            return zbior_zmiennych
+        elif isinstance(self, Negacja):
+            return self.formula.zmienne(zbior_zmiennych)
+        else:
+            return self.f1.zmienne(zbior_zmiennych) | self.f2.zmienne(zbior_zmiennych)
 
-    def oblicz(self, zmienne=[]):
-        pass
+    def tautologia(self):
+        zmienne = self.zmienne()
+        wszystkie_zmienne = [dict(zip(zmienne, wartosc))
+                             for wartosc in list(permutations(len(zmienne)*(True, False), len(zmienne)))]
+        return all(self.oblicz(zmienne) for zmienne in wszystkie_zmienne)
 
-    def __str__(self):
-        pass
 
 class T(Formula):
-    def __init__(self):
-        super().__init__()
-
     def oblicz(self, zmienne=[]):
         return True
 
     def __str__(self):
-        return 'T'
+        return 'True'
+
 
 class F(Formula):
-    def __init__(self):
-        super().__init__()
-
     def oblicz(self, zmienne=[]):
         return False
 
     def __str__(self):
-        return 'F'
+        return 'False'
+
 
 class Zmienna(Formula):
     nazwa = ''
@@ -35,17 +43,16 @@ class Zmienna(Formula):
         self.nazwa = nazwa_zmiennej
 
     def oblicz(self, zmienne):
-        for zm, war in zmienne:
-            if self.nazwa == zm:
-                return war
-        return Exception('nie ma zmiennej')
+        if self.nazwa not in zmienne:
+            raise Exception(
+                f'Nie znaleziono zmiennej {self.nazwa} w liście zmiennych.')
+        return zmienne[self.nazwa]
 
     def __str__(self):
         return self.nazwa
 
-class Negacja(Formula):
-    formula = None
 
+class Negacja(Formula):
     def __init__(self, formula):
         self.formula = formula
 
@@ -55,10 +62,8 @@ class Negacja(Formula):
     def __str__(self):
         return f'(~{self.formula.__str__()})'
 
-class Koniunkcja(Formula):
-    f1 = None
-    f2 = None
 
+class Koniunkcja(Formula):
     def __init__(self, formula1, formula2):
         self.f1 = formula1
         self.f2 = formula2
@@ -69,10 +74,8 @@ class Koniunkcja(Formula):
     def __str__(self):
         return f'({self.f1.__str__()} and {self.f2.__str__()})'
 
-class Alternatywa(Formula):
-    f1 = None
-    f2 = None
 
+class Alternatywa(Formula):
     def __init__(self, formula1, formula2):
         self.f1 = formula1
         self.f2 = formula2
@@ -83,10 +86,8 @@ class Alternatywa(Formula):
     def __str__(self):
         return f'({self.f1.__str__()} or {self.f2.__str__()})'
 
-class Implikacja(Formula):
-    f1 = None
-    f2 = None
 
+class Implikacja(Formula):
     def __init__(self, formula1, formula2):
         self.f1 = formula1
         self.f2 = formula2
@@ -97,10 +98,8 @@ class Implikacja(Formula):
     def __str__(self):
         return f'({self.f1.__str__()} => {self.f2.__str__()})'
 
-class Rownowaznosc(Formula):
-    f1 = None
-    f2 = None
 
+class Rownowaznosc(Formula):
     def __init__(self, formula1, formula2):
         self.f1 = formula1
         self.f2 = formula2
@@ -112,10 +111,27 @@ class Rownowaznosc(Formula):
         return f'({self.f1.__str__()} <=> {self.f2.__str__()})'
 
 
-
-print(
-    Implikacja(
-        Zmienna('x'),
-        F()
-    ).oblicz([('x', 1)])
+test1 = Alternatywa(
+    Zmienna('x'),
+    Negacja(Zmienna('x'))
 )
+
+test2 = Rownowaznosc(
+    Negacja(
+        Koniunkcja(
+            Zmienna('p'),
+            Zmienna('q')
+        )
+    ),
+    Alternatywa(
+        Negacja(
+            Zmienna('p')
+        ),
+        Negacja(
+            Zmienna('q')
+        )
+    )
+)
+
+print(test1.tautologia())
+print(test1.tautologia())
