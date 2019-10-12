@@ -1,17 +1,16 @@
 function przez_sume(num){
-    suma = 0;
-    str = num.toString();
-    for(i = 0; i < str.length; i++){
-        suma += parseInt(str.charAt(i));
+    var suma = 0;
+    cyfry = Array.from(num.toString()).map(Number);
+    for(var i = 0; i < cyfry.length; i++){
+        suma += cyfry[i];
     }
     return num % suma == 0;
 }
 
 function przez_kazda(num){
-    str = num.toString();
-    for(i = 0; i < str.length; i++){
-        if(num % parseInt(str.charAt(i)) != 0)
-            return false;
+    cyfry = Array.from(num.toString()).map(Number);
+    for(var i = 0; i < cyfry.length; i++){
+        if(num % cyfry[i] != 0) return false;
     }
     return true;
 }
