@@ -134,4 +134,4 @@ test2 = Rownowaznosc(
 )
 
 print(test1.tautologia())
-print(test1.tautologia())
+print(test2.tautologia())
