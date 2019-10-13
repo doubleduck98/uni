@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-S:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\lista8.dir/objects.a
-=======
-D:\JetBrains\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\lista8.dir/objects.a
->>>>>>> 43814c3d07ebddda730769d5b66baf1a31e712f6
-C:\MinGW\bin\ar.exe cr CMakeFiles\lista8.dir/objects.a @CMakeFiles\lista8.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\lista8.dir/objects.a -Wl,--no-whole-archive  -o lista8.exe -Wl,--out-implib,liblista8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lista8.dir\linklibs.rsp

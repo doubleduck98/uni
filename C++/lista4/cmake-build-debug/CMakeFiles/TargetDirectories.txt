@@ -1,3 +1,0 @@
-/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/cmake-build-debug/CMakeFiles/lista4.dir
-/mnt/01CE8F7A5089BFF0/Studia/C++/lista4/cmake-build-debug/CMakeFiles/edit_cache.dir

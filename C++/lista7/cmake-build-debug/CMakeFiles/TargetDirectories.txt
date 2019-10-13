@@ -1,3 +1,0 @@
-D:/STUDIA/C++/lista7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/STUDIA/C++/lista7/cmake-build-debug/CMakeFiles/lista7.dir
-D:/STUDIA/C++/lista7/cmake-build-debug/CMakeFiles/edit_cache.dir

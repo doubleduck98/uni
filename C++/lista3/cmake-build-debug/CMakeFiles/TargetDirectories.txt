@@ -1,3 +1,0 @@
-D:/STUDIA/C++/lista3/cmake-build-debug/CMakeFiles/lista3.dir
-D:/STUDIA/C++/lista3/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/STUDIA/C++/lista3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
