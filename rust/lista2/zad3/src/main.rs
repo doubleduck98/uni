@@ -5,10 +5,8 @@ fn main() {
 fn summy(strng: &str) -> i32 {
     strng
         .split_whitespace()
-        .map(|s| s.parse().unwrap())
-        .collect::<Vec<i32>>()
-        .iter()
-        .sum::<i32>()
+        .map(|s| s.parse::<i32>().unwrap())
+        .sum()
 }
 
 #[test]
