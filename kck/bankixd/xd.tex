@@ -1,14 +1,38 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[polish]{babel}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 \frenchspacing
  \begin{document}
- \section{logowanie}
+ \begin{titlepage}
+ \begin{center}
+        \vspace*{1cm}
+ 
+        \Huge
+        \textbf{Interfejs logowania Banku Millennium}
+ 
+        \vspace{0.5cm}
+        \LARGE
+       
+ 
+        \vspace{1.5cm}
+ 
+        \textbf{Szymon Zienkiewicz}
+ 
+        \vfill
+    \end{center}
+ \end{titlepage}
+ \section{Logowanie}
  Do konta bankowego logujemy się na stronie bankmillennium.pl. Do zalogowania potrzebujemy kod, który otrzymujemy w momencie podpisywania umowy, hasło (które oczywiście możemy ustawić sobie sami) oraz używając dwóch cyfr PESELU losowo wybieranych przez system. Nie spotkałem się z weryfikacją duwstopniową, na przykład przez sms. Ani w ustawieniach, ani automatycznie w momencie logowania się z innej przeglądarki lub lokalizacji.
- \section{wnętrze}
- Po zalogowaniu przechodzimy do strony głównej naszego konta. Na samej górze znajduje się panel, na którym są skróty do skrzynki pocztowej i kontaktów, przycisk do przejscia do strony głównej oraz przycisk wyloguj. Poniżej znajdują się zakładki nawigacyjne całego systemu bankowości - moje finanse, konta, karty, wnioski itp. W centralnej częsci znajduje się tzw. strona główna, którą można dostosować wg uznania wybierając spośród kilku paneli te, które chcemy widzieć. Po lewej znajduje się menu skrótów, które także możemy dowolnie zmieniać. Całość prezentuje się całkiem zwarto lecz intuicyjnie, a możliwość dostosowania polepsza korzystanie ze strony oraz skraca czas spędzony na koncie. Nasz czas na każdej karcie jest także mierzony i określa się to nazwą czas sesji, po upływie którego jesteśmy wylogowywani z konta.\newline Każda transakcja, zlecenie stałe jest zatwierdzane kodem sms, którym musimy autoryzować działanie. Jest to duży plus dla bezpieczeństwa.
- \section{aplikacja mobilna}
+ \newline
+ \begin{center}
+ \includegraphics[width=1\textwidth]{log1.png} 
+ \includegraphics[width=0.44\textwidth]{log2.png}
+ \end{center}
+ \section{Wnętrze}
+ Po zalogowaniu przechodzimy do strony głównej naszego konta. Na samej górze znajduje się panel, na którym są skróty do skrzynki pocztowej i kontaktów, przycisk do przejscia do strony głównej oraz przycisk wyloguj. Poniżej znajdują się zakładki nawigacyjne całego systemu bankowości - moje finanse, konta, karty, wnioski itp. W centralnej częsci znajduje się tzw. strona główna, którą można dostosować wg uznania wybierając spośród kilku paneli te, które chcemy widzieć. Po lewej znajduje się menu skrótów, które także możemy dowolnie zmieniać. Całość prezentuje się całkiem zwarto lecz intuicyjnie, a możliwość dostosowania polepsza korzystanie ze strony oraz skraca czas spędzony na koncie. Nasz czas na każdej karcie jest także mierzony i określa się to nazwą czas sesji, po upływie którego jesteśmy wylogowywani z konta. Każda transakcja, zlecenie stałe jest zatwierdzane kodem sms, którym musimy autoryzować działanie. Jest to duży plus dla bezpieczeństwa.
+ \section{Aplikacja mobilna}
  Aplikacja moblina jest kolejną częścią banku, a także kolejnym interfejsem. Logujemy się za pomocą 4-cyfrowego pinu, bądź za pomocą odcisku palca. Analogicznie do aplikacji przeglądarkowej, aplikacja mobilna także daje się dostosowywać, za pomocą kafelków. W aplikacji da się także ustawić kafelki ekranu logowania, m.in. kod blik, saldo itd. Opcja przyspieszająca użytkowanie, ale traci się na bezpieczeństwie. Za pomocą aplikacji oraz telefonu wyposażonego w NFC można także przeprowadzać płatności zbliżeniowe. Większość operacji potwierdza się tym samym 4-cyfrowym kodem, używanym do logowania.
  \end{document}
  
