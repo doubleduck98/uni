@@ -3,7 +3,7 @@ fn main() {
 }
 
 fn square_area_to_circle(size: f64) -> f64 {
-    return size / 4.0 * std::f64::consts::PI;
+    size / 4.0 * std::f64::consts::PI
 }
 
 fn assert_close(a: f64, b: f64, epsilon: f64) {

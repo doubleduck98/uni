@@ -6,7 +6,7 @@ fn count_red_beads(n: u32) -> u32 {
     if n == 0 {
         return 0;
     }
-    return (n - 1) * 2;
+    (n - 1) * 2
 }
 
 #[test]
