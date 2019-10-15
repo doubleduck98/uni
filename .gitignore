@@ -17,5 +17,5 @@ CMakeFiles
 cmake_install.cmake
 
 #cargo
-/target/
+target/
 **/*.rs.bk
