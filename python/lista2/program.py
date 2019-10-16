@@ -1,4 +1,4 @@
-from itertools import permutations
+from itertools import product
 
 
 class Formula:
@@ -14,9 +14,9 @@ class Formula:
             return self.f1.zmienne(zbior_zmiennych) | self.f2.zmienne(zbior_zmiennych)
 
     def tautologia(self):
-        zmienne = self.zmienne()
+        zmienne = self.zmienne(set())
         wszystkie_zmienne = [dict(zip(zmienne, wartosc))
-                             for wartosc in list(permutations(len(zmienne)*(True, False), len(zmienne)))]
+                             for wartosc in list(product((True, False), repeat=len(zmienne)))]
         return all(self.oblicz(zmienne) for zmienne in wszystkie_zmienne)
 
 
