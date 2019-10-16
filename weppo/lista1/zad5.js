@@ -16,7 +16,7 @@ function fib_iter(num) {
 
 function test_rek(n) {
     console.time("rek");
-    console.log("test rek: " + i + ", " + fib_rek(n));
+    console.log("test rek: " + n + ", " + fib_rek(n));
     console.timeEnd("rek");
 }
 
