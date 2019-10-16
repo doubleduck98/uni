@@ -10,6 +10,9 @@ RPiS/
 test/
 WWW/
 
+#vscode
+.vscode/
+
 #cmake
 compile_commands.json
 CMakeCache.txt
