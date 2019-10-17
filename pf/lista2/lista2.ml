@@ -61,3 +61,46 @@ let (<--) lista n =
 [] <-- 71;;
 [1; 2; 3] <-- 4;;
 [-4.; -2.; -1.] <-- -3.;;
+
+(* ZADANIE 5 *)
+let take n lista =
+  let rec tk lst res ctr =
+    if ctr <= 0 then List.rev res
+    else if lst = [] then List.rev res
+    else tk (List.tl lst) ((List.hd lst) :: res) (ctr-1) in
+  tk lista [] n;;
+
+take 2 [1; 2; 3; 5; 6];;
+take (-2) [1; 2; 3; 5; 6];;
+take 8 [1; 2; 3; 5; 6];;
+take 5 ['o', 'c', 'a', 'm', 'l'];;
+
+(* ZADANIE 6 *)
+let drop n lista =
+  let rec drp lst res ctr =
+    if lst = [] then List.rev res
+    else if ctr >= n then drp (List.tl lst) ((List.hd lst) :: res) ctr
+    else drp (List.tl lst) res (ctr+1) in
+  drp lista [] 0;;
+
+drop 2 [1; 2; 3; 5; 6];;
+drop (-2) [1; 2; 3; 5; 6];;
+drop 8 [1; 2; 3; 5; 6];;
+drop 0 ['o', 'c', 'a', 'm', 'l'];;
+
+(* ZADANIE 7 *)
+let replicate lista =
+  let rec repl lst ctr res =
+    if lst = [] then List.rev res
+    else if ctr > 0 then repl lst (ctr - 1) ((List.hd lst) :: res) 
+    else repl (List.tl lst) 
+              (if (List.tl lst) != [] then (List.hd (List.tl lst)) else -1)
+              res in
+  match lista with
+    [] -> []
+  | _ -> repl lista (List.hd lista) [];;
+
+replicate [1; 0; 4; -2; 3];;
+replicate [];;
+replicate [1; 2; 3];;
+replicate [9; 9; 7];;
