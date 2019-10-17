@@ -37,8 +37,6 @@ class F(Formula):
 
 
 class Zmienna(Formula):
-    nazwa = ''
-
     def __init__(self, nazwa_zmiennej):
         self.nazwa = nazwa_zmiennej
 
@@ -60,7 +58,7 @@ class Negacja(Formula):
         return not self.formula.oblicz(zmienne)
 
     def __str__(self):
-        return f'(~{self.formula.__str__()})'
+        return f'~({self.formula.__str__()})'
 
 
 class Koniunkcja(Formula):
@@ -72,7 +70,7 @@ class Koniunkcja(Formula):
         return self.f1.oblicz(zmienne) and self.f2.oblicz(zmienne)
 
     def __str__(self):
-        return f'({self.f1.__str__()} and {self.f2.__str__()})'
+        return f'{self.f1.__str__()} ^ {self.f2.__str__()}'
 
 
 class Alternatywa(Formula):
@@ -84,7 +82,7 @@ class Alternatywa(Formula):
         return self.f1.oblicz(zmienne) or self.f2.oblicz(zmienne)
 
     def __str__(self):
-        return f'({self.f1.__str__()} or {self.f2.__str__()})'
+        return f'{self.f1.__str__()} v {self.f2.__str__()}'
 
 
 class Implikacja(Formula):
@@ -96,7 +94,7 @@ class Implikacja(Formula):
         return not(self.f1.oblicz(zmienne)) or self.f2.oblicz(zmienne)
 
     def __str__(self):
-        return f'({self.f1.__str__()} => {self.f2.__str__()})'
+        return f'{self.f1.__str__()} => {self.f2.__str__()}'
 
 
 class Rownowaznosc(Formula):
@@ -108,7 +106,7 @@ class Rownowaznosc(Formula):
         return self.f1.oblicz(zmienne) == self.f2.oblicz(zmienne)
 
     def __str__(self):
-        return f'({self.f1.__str__()} <=> {self.f2.__str__()})'
+        return f'{self.f1.__str__()} <=> {self.f2.__str__()}'
 
 
 test1 = Alternatywa(
@@ -125,7 +123,7 @@ test2 = Rownowaznosc(
     ),
     Alternatywa(
         Negacja(
-            Zmienna('p')
+            Zmienna('a')
         ),
         Negacja(
             Zmienna('q')
@@ -133,5 +131,7 @@ test2 = Rownowaznosc(
     )
 )
 
-print(test1.tautologia())
+print(test1)
+print(test1.oblicz({'x': True}))
+print(test2)
 print(test2.tautologia())
