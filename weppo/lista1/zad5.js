@@ -31,4 +31,4 @@ function fn5() {
     }
 }
 
-test_rek(41)
+test_rek(40)
