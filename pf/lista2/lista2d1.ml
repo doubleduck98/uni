@@ -50,10 +50,11 @@ let (<->) (x1, y1, z1) (x2, y2, z2) =
 (* ZADANIE 4 *)
 let (<--) lista n =
   let rec ins low high =
-    if high = [] then List.rev (n :: low)
-    else if (List.hd high) > n then List.rev (n :: low) @ high
-    else ins ((List.hd high) :: low) (List.tl high) in
-  ins [] lista;;
+    match high with
+      [] -> List.rev (n::low)
+    | h::t -> if h > n then List.rev (n::low) @ high
+                       else ins (h::low) t
+    in ins [] lista;;
 
 [1; 2; 3; 4; 5] <-- 3;;
 ['a'; 'b'; 'd']  <-- 'c';;
@@ -66,9 +67,11 @@ let (<--) lista n =
 let take n lista =
   let rec tk lst res ctr =
     if ctr <= 0 then List.rev res
-    else if lst = [] then List.rev res
-    else tk (List.tl lst) ((List.hd lst) :: res) (ctr-1) in
-  tk lista [] n;;
+    else match lst with
+      [] -> List.rev res
+    | h::t -> tk t (h::res) (ctr-1)
+  in tk lista [] n;;
+
 
 take 2 [1; 2; 3; 5; 6];;
 take (-2) [1; 2; 3; 5; 6];;
@@ -78,10 +81,11 @@ take 5 ['o', 'c', 'a', 'm', 'l'];;
 (* ZADANIE 6 *)
 let drop n lista =
   let rec drp lst res ctr =
-    if lst = [] then List.rev res
-    else if ctr >= n then drp (List.tl lst) ((List.hd lst) :: res) ctr
-    else drp (List.tl lst) res (ctr+1) in
-  drp lista [] 0;;
+    match lst with
+      [] -> List.rev res
+    | h::t -> if ctr >= n then drp t (h::res) ctr
+              else drp t res (ctr+1)
+  in drp lista [] 0;;
 
 drop 2 [1; 2; 3; 5; 6];;
 drop (-2) [1; 2; 3; 5; 6];;
@@ -91,14 +95,17 @@ drop 0 ['o', 'c', 'a', 'm', 'l'];;
 (* ZADANIE 7 *)
 let replicate lista =
   let rec repl lst ctr res =
-    if lst = [] then List.rev res
-    else if ctr > 0 then repl lst (ctr - 1) ((List.hd lst) :: res) 
-    else repl (List.tl lst) 
-              (if (List.tl lst) != [] then (List.hd (List.tl lst)) else -1)
-              res in
-  match lista with
-    [] -> []
-  | _ -> repl lista (List.hd lista) [];;
+    match lst with
+      [] -> List.rev res
+    | h::t ->
+      if ctr > 0 
+        then repl lst (ctr-1) (h::res)
+        else repl t
+             (if t != [] then (List.hd t) else -1)
+             res
+    in match lista with
+      [] -> []
+    | _ -> repl lista (List.hd lista) [];;
 
 replicate [1; 0; 4; -2; 3];;
 replicate [];;
