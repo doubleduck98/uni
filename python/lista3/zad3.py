@@ -1,5 +1,6 @@
 acc = {}
 
+    
 def sudan(n, x, y):
     if (n, x, y) in acc:
         return acc[(n, x, y)]
