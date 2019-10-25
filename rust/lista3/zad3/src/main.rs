@@ -1,22 +1,118 @@
 fn main() {
-    zakoduj("ab", "cd");
-}
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
 
-fn zakoduj(code1: &str, code2: &str, msg: &str) {
-    let kod = code1.chars().zip(code2.chars()).collect::<Vec<_>>();
-    msg.chars().
+    let cipher = Cipher::new(map1, map2);
+    println!("{}", cipher.encode("siema"));
+    println!("{}", cipher.decode("vrice"))
 }
 
 struct Cipher {
-    code1: String,
-    code2: String,
+    kod: Vec<(char, char)>,
 }
 
 impl Cipher {
     fn new(map1: &str, map2: &str) -> Cipher {
         Cipher {
-            code1: map1.to_string(),
-            code2: map2.to_string(),
+            kod: map1.chars().zip(map2.chars()).collect::<Vec<_>>(),
         }
     }
+
+    fn encode(&self, string: &str) -> String {
+        string
+            .chars()
+            .map(|c| self.kod.iter().find(|x| x.0 == c).map_or(c, |y| y.1))
+            .collect()
+    }
+
+    fn decode(&self, string: &str) -> String {
+        string
+            .chars()
+            .map(|c| self.kod.iter().find(|x| x.1 == c).map_or(c, |y| y.0))
+            .collect()
+    }
+}
+
+#[test]
+fn test0() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("abc"), "eta");
+}
+#[test]
+fn test1() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("xyz"), "qxz");
+}
+#[test]
+fn test2() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.decode("eirfg"), "aeiou");
+}
+#[test]
+fn test3() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.decode("erlang"), "aikcfu");
+}
+#[test]
+fn test4() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("essa"), "ivve");
+}
+#[test]
+fn test5() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("szymon"), "vzxcfm");
+}
+#[test]
+fn test6() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("zienkiewicz"), "zrimlrijraz");
+}
+#[test]
+fn test7() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.encode("rustjestsuper"), "pgvbdivbvgwip");
+}
+#[test]
+fn test8() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(cipher.decode("zelfofjemejreofcfva"), "zakodowanawiadomosc");
+}
+#[test]
+fn test9() {
+    let map1 = "abcdefghijklmnopqrstuvwxyz";
+    let map2 = "etaoinshrdlucmfwypvbgkjqxz";
+
+    let cipher = Cipher::new(map1, map2);
+    assert_eq!(
+        cipher.decode("fmevzwruiorecimbxdebrvzipbxqulr"),
+        "onaszpilediamentyjatiszertyxlki"
+    );
 }
