@@ -21,14 +21,14 @@ impl Cipher {
     fn encode(&self, string: &str) -> String {
         string
             .chars()
-            .map(|c| self.kod.iter().find(|x| x.0 == c).map_or(c, |y| y.1))
+            .map(|c| self.kod.iter().find(|x| x.0 == c).map_or(c, |x| x.1))
             .collect()
     }
 
     fn decode(&self, string: &str) -> String {
         string
             .chars()
-            .map(|c| self.kod.iter().find(|x| x.1 == c).map_or(c, |y| y.0))
+            .map(|c| self.kod.iter().find(|x| x.1 == c).map_or(c, |x| x.0))
             .collect()
     }
 }
