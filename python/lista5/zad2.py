@@ -2,24 +2,29 @@ from itertools import product
 from functools import reduce
 
 
-def kryptoarm(pierwsze, drugie, wynik):
-
+def wypisz_ladnie(slownik, slowa):
     def suma(slowo, slownik):
-        lit = [char for char in slowo]
-        suma = 0
-        for i in lit:
-            suma = 10*suma + slownik[i]
-        return suma
+        return reduce((lambda x, y: x*10 + y), map((lambda x: slownik[x]), slowo))
+    print(slownik)
+    print(''.join(str(suma(slowa[0], slownik)).rjust(
+        len(str(suma(slowa[2], slownik)))+1)))
+    print('+'+''.join(str(suma(slowa[1], slownik)
+                          ).rjust(len(str(suma(slowa[2], slownik))))))
+    print('='+''.join(str(suma(slowa[2], slownik)
+                          ).rjust(len(str(suma(slowa[2], slownik))))))
+
+
+def kryptoarm(pierwsze, drugie, trzecie):
 
     def czy_rowna_sie(slownik):
-        hm = suma(pierwsze, slownik) + suma(drugie,
-                                            slownik) == suma(wynik, slownik)
-        if hm:
-            print(slownik)
-    literki = set(char for char in (pierwsze+drugie+wynik))
+        if suma(pierwsze, slownik) + suma(drugie, slownik) == suma(trzecie, slownik):
+            wypisz_ladnie(slownik, [pierwsze, drugie, trzecie])
+
+    def suma(slowo, slownik):
+        return reduce((lambda x, y: x*10 + y), map((lambda x: slownik[x]), slowo))
+    literki = set(char for char in (pierwsze+drugie+trzecie))
     wszystkie = [dict(zip(literki, wartosci)) for wartosci in list(
         product((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), repeat=len(literki)))]
-    # print(wszystkie)
     for slw in wszystkie:
         czy_rowna_sie(slw)
 
