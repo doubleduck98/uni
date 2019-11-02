@@ -48,11 +48,17 @@ filter (function x -> x = 'e' || x = 's' || x = 'a') ['c'; 'b'; 'e'; 'm'; 's'; '
 
 (* ZADANIE 4 *)
 let usun1 f lista =
+  match lista with
+    [] -> []
+  | x::xs -> if f x then xs
+             else x::(usun1 f xs);;
+
+let usun2 f lista =
   let rec usn lst acc =
     match lst with
       [] -> List.rev acc
-    | x::xs -> if f x then (List.rev acc) @ xs 
-                      else usn xs (x :: acc)
+    | x::xs -> if f x then List.rev_append acc xs 
+               else usn xs (x :: acc)
   in usn lista [];;
 
 usun1 (function x -> x = 2) [1; 2; 3; 2; 5];;
@@ -60,5 +66,27 @@ usun1 (function x -> x = 2) [1; 3; 4; 5; 6; 7];;
 usun1 (function x -> x = 'o') ['o'; 'c'; 'a'; 'm'; 'l'];;
 usun1 (function x -> x = 71) [];;
 
+usun2 (function x -> x = 2) [1; 2; 3; 2; 5];;
+usun2 (function x -> x = 2) [1; 3; 4; 5; 6; 7];;
+usun2 (function x -> x = 'o') ['o'; 'c'; 'a'; 'm'; 'l'];;
+usun2 (function x -> x = 71) [];;
 
+(* ZADANIE 5 *)
+let merge lista1 lista2 =
+  let rec mrg l1 l2 res =
+    match l1, l2 with
+      ([], []) -> List.rev res
+    | (xs, []) -> (List.rev res) @ xs
+    | ([], ys) -> (List.rev res) @ ys
+    | ((x::xs as l1), (y::ys as l2)) -> if x <= y then mrg xs l2 (x::res)
+                                        else mrg l1 ys (y::res)
+  in mrg lista1 lista2 [];;
 
+let rec split x y z = 
+  match x with
+    [] -> (y,z)
+  | x::resto -> split resto z (x::y);;
+
+merge [1; 3; 5] [2; 4];;
+List.split [1; 2; 3; 4; 5];;
+<= 1 2;;
