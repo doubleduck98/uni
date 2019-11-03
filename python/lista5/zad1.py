@@ -56,10 +56,6 @@ def gnuplot(punkty):
         dat.write(
             f'{punkty[n]}\t{timer(gen[n], "pierwsze_generator")}\t{timer(punkty[n], "pierwsze_imperatywna")}\t{timer(punkty[n], "pierwsze_skladana")}\t{timer(punkty[n], "pierwsze_funkcyjna")}\n')
     dat.close()
-    file_optput = open('plot.png', 'w+')
-    subprocess.run(['gnuplot', 'plot.gp'], stdout=file_optput,
-                   cwd=r'/home/szipi/uni/python/lista5/')
-    file_optput.close()
 
 
 gnuplot([x for x in range(100, 1000, 100)])

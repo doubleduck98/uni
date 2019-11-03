@@ -27,11 +27,11 @@ def pierwsze_funkcyjna(n):
 
 
 print(timeit.Timer('pierwsze_imperatywna(1000)',
-                   globals=globals()).timeit(5))
+                   globals=globals()).timeit(10) / 10)
 print(timeit.Timer('pierwsze_funkcyjna(1000)',
-                   globals=globals()).timeit(5))
+                   globals=globals()).timeit(10) / 10)
 print(timeit.Timer('pierwsze_funkcyjna(1000)',
-                   globals=globals()).timeit(5))
+                   globals=globals()).timeit(10) / 10)
 
 print(pierwsze_funkcyjna(50) == pierwsze_imperatywna(50) == pierwsze_skladana(50))
 

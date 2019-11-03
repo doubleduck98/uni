@@ -21,12 +21,12 @@ def doskonale_funkcyjna(n):
     return list(filter(lambda x: czy_doskonala(x), range(1, n+1)))
 
 
-print(timeit.Timer('doskonale_imperatywna(10000)',
-                   globals=globals()).timeit(5))
-print(timeit.Timer('doskonale_funkcyjna(10000)',
-                   globals=globals()).timeit(5))
-print(timeit.Timer('doskonale_funkcyjna(10000)',
-                   globals=globals()).timeit(5))
+print(timeit.Timer('doskonale_imperatywna(1000)',
+                   globals=globals()).timeit(10) / 10)
+print(timeit.Timer('doskonale_funkcyjna(1000)',
+                   globals=globals()).timeit(10) / 10)
+print(timeit.Timer('doskonale_funkcyjna(1000)',
+                   globals=globals()).timeit(10) / 10)
 
 print(doskonale_funkcyjna(500) == doskonale_imperatywna(500) == doskonale_skladana(500))
 
