@@ -72,21 +72,32 @@ usun2 (function x -> x = 'o') ['o'; 'c'; 'a'; 'm'; 'l'];;
 usun2 (function x -> x = 71) [];;
 
 (* ZADANIE 5 *)
-let merge lista1 lista2 =
+let merge f lista1 lista2 =
   let rec mrg l1 l2 res =
     match l1, l2 with
-      ([], []) -> List.rev res
-    | (xs, []) -> (List.rev res) @ xs
-    | ([], ys) -> (List.rev res) @ ys
-    | ((x::xs as l1), (y::ys as l2)) -> if x <= y then mrg xs l2 (x::res)
-                                        else mrg l1 ys (y::res)
+      [], [] -> List.rev res
+    | xs, [] -> (List.rev res) @ xs
+    | [], ys -> (List.rev res) @ ys
+    | (x::xs as l1), (y::ys as l2) -> if f x y then mrg xs l2 (x::res)
+                                      else mrg l1 ys (y::res)
   in mrg lista1 lista2 [];;
 
-let rec split x y z = 
-  match x with
-    [] -> (y,z)
-  | x::resto -> split resto z (x::y);;
+let rec split lista =
+  match lista with
+      [] -> [], []
+    | [_] as t1 -> t1, []
+    | h::t -> let t1, t2 = split t in h::t2, t1;;
 
-merge [1; 3; 5] [2; 4];;
-List.split [1; 2; 3; 4; 5];;
-<= 1 2;;
+
+let rec merge_sort f lista =
+  match lista with
+    [] -> []
+  | [_] as list -> list
+  | list -> let l1, l2 = split list 
+in merge f (merge_sort f l1) (merge_sort f l2);;
+
+
+merge_sort (fun x y -> x <= y) [6; 7; 0; 8; 3; 2; 4; 9; 5; 1];;
+merge_sort (fun x y -> x <= y) [];;
+merge_sort (fun x y -> x <= y) ['d'; 'b'; 'e'; 'a'; 'c'];;
+merge_sort (fun (a, b) (c, d) -> a <= c) [(1, 1); (2, 0); (5, 0); (4, 0); (1, 2)];;
