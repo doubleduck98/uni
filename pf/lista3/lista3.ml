@@ -101,3 +101,4 @@ merge_sort (fun x y -> x <= y) [6; 7; 0; 8; 3; 2; 4; 9; 5; 1];;
 merge_sort (fun x y -> x <= y) [];;
 merge_sort (fun x y -> x <= y) ['d'; 'b'; 'e'; 'a'; 'c'];;
 merge_sort (fun (a, b) (c, d) -> a <= c) [(1, 1); (2, 0); (5, 0); (4, 0); (1, 2)];;
+merge_sort (fun (a, b) (c, d) -> a = c) [(1, 1); (2, 0); (5, 0); (4, 0); (1, 2)];;
