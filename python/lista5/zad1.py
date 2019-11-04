@@ -1,5 +1,4 @@
 import timeit
-import subprocess
 
 
 def czy_pierwsza(n):
