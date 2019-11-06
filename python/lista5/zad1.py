@@ -22,7 +22,7 @@ def pierwsze():
 
 def pierwsze_generator(n):
     p = pierwsze()
-    return [p.__next__() for _ in range(1, n+1)]
+    return [next(p) for _ in range(n+1)]
 
 
 def pierwsze_imperatywna(n):
