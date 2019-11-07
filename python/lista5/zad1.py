@@ -42,13 +42,13 @@ def pierwsze_funkcyjna(n):
 
 
 def gnuplot(punkty):
-    def maxy_dla_generatora():
+    def pkty_dla_generatora():
         return [len(pierwsze_skladana(n)) for n in punkty]
 
     def timer(n, fun):
         return str(timeit.Timer(f'{fun}({n})',
                                 globals=globals()).timeit(10) / 10)
-    gen = maxy_dla_generatora()
+    gen = pkty_dla_generatora()
     dat = open("plot.dat", "w")
     dat.write("#\tX\tgenerator\timperatywna\tskladana\tfunkcyjna\n")
     for n in range(0, len(punkty)):

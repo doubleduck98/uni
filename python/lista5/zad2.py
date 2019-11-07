@@ -19,7 +19,7 @@ def kryptoarytm(pierwsze, drugie, trzecie):
     def liczba(slowo, slownik):
         return reduce((lambda x, y: x*10 + y), map((lambda x: slownik[x]), slowo))
 
-    def czy_rowna_sie(slownik):
+    def czy_rowna_sie(slownik): 
         if liczba(pierwsze, slownik) + liczba(drugie, slownik) == liczba(trzecie, slownik):
             wypisz_ladnie(slownik, [pierwsze, drugie, trzecie])
     literki = set(char for char in (pierwsze+drugie+trzecie))
