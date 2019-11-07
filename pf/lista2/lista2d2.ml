@@ -48,7 +48,6 @@ let (<->) (x1, y1, z1) (x2, y2, z2) =
 (0., 0., 0.) <-> (0., 0., 0.);;
 
 (* ZADANIE 4 *)
-(* UPROSCIC *)
 let (<--) lista n =
   let rec ins low high =
     match high with

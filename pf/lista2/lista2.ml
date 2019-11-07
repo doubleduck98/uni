@@ -48,7 +48,7 @@ let (<->) (x1, y1, z1) (x2, y2, z2) =
 (0., 0., 0.) <-> (0., 0., 0.);;
 
 (* ZADANIE 4 *)
-let (<--) lista n =
+let rec (<--) lista n =
   let rec ins low high =
     match high with
       [] -> List.rev (n::low)

@@ -29,7 +29,7 @@ czyIstnieje2 (function x -> x = 4) [1; 2; 3; 5];;
 czyIstnieje2 (function x -> x = 71) [];;
 
 let rec czyIstnieje3 f lista =
-  List.fold_right (fun x y -> y || f x) lista false;;
+  List.fold_right (fun x -> y || f x) lista false;;
 
 czyIstnieje3 (function x -> x = 2) [1; 2; 3; 5];;
 czyIstnieje3 (function x -> x = 'm') ['o'; 'c'; 'a'; 'm'; 'l'];;
@@ -47,11 +47,11 @@ filter (function x -> x = 'e' || x = 's' || x = 'a') ['c'; 'b'; 'e'; 'm'; 's'; '
 
 
 (* ZADANIE 4 *)
-let rec usun1 f lista =
+let usun1 f lista =
   match lista with
     [] -> []
   | x::xs -> if f x then xs
-             else x::usun1 f xs;;
+             else x::(usun1 f xs);;
 
 let usun2 f lista =
   let rec usn lst acc =
@@ -72,12 +72,15 @@ usun2 (function x -> x = 'o') ['o'; 'c'; 'a'; 'm'; 'l'];;
 usun2 (function x -> x = 71) [];;
 
 (* ZADANIE 5 *)
-let rec merge f (l1, l2) = 
-  match (l1, l2) with
-    list, []
-  | [], list -> list
-  | h1::t1, h2::t2 -> if f h1 h2 then h1 :: merge f (t1, h2::t2)
-                      else h2 :: merge f (h1::t1, t2);;
+let merge f lista1 lista2 =
+  let rec mrg l1 l2 res =
+    match l1, l2 with
+      [], [] -> List.rev res
+    | xs, [] -> (List.rev res) @ xs
+    | [], ys -> (List.rev res) @ ys
+    | (x::xs as l1), (y::ys as l2) -> if f x y then mrg xs l2 (x::res)
+                                      else mrg l1 ys (y::res)
+  in mrg lista1 lista2 [];;
 
 let rec split lista =
   match lista with
@@ -91,11 +94,11 @@ let rec merge_sort f lista =
     [] -> []
   | [_] as list -> list
   | list -> let l1, l2 = split list 
-            in merge f (merge_sort f l1, merge_sort f l2);;
+in merge f (merge_sort f l1) (merge_sort f l2);;
 
 
 merge_sort (fun x y -> x <= y) [6; 7; 0; 8; 3; 2; 4; 9; 5; 1];;
 merge_sort (fun x y -> x <= y) [];;
 merge_sort (fun x y -> x <= y) ['d'; 'b'; 'e'; 'a'; 'c'];;
 merge_sort (fun (a, b) (c, d) -> a <= c) [(1, 1); (2, 0); (5, 0); (4, 0); (1, 2)];;
-merge_sort (fun (a, b) (c, d) -> a >= c) [(1, 1); (2, 0); (2, 1); (2, 2); (5, 0); (4, 0); (1, 2)];;
+merge_sort (fun (a, b) (c, d) -> a = c) [(1, 1); (2, 0); (5, 0); (4, 0); (1, 2)];;
