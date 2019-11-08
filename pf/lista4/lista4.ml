@@ -14,10 +14,10 @@ sum t;;
 sum tt;;
 
 (* ZADANIE 2*)
-let rec foldBT f str tree = 
+let rec foldBT f acc tree = 
   match tree with
-    Node(v, left, right) -> f v (foldBT f str left, foldBT f str right)
-  | Empty -> str;;
+    Node(v, left, right) -> f v (foldBT f acc left, foldBT f acc right)
+  | Empty -> acc;;
 
 foldBT (fun x (l, r) -> x + l + r) 0 t;;
 foldBT (fun x (l, r) -> x + l + r) 0 tt;;
