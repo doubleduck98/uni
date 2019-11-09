@@ -48,14 +48,12 @@ let (<->) (x1, y1, z1) (x2, y2, z2) =
 (0., 0., 0.) <-> (0., 0., 0.);;
 
 (* ZADANIE 4 *)
-(* UPROSCIC *)
-let (<--) lista n =
-  let rec ins low high =
-    match high with
-      [] -> List.rev (n::low)
-    | h::t -> if h > n then List.rev (n::low) @ high
-                       else ins (h::low) t
-    in ins [] lista;;
+let rec (<--) lista n = 
+  match lista with
+    [] -> [n]
+  | h::t -> 
+    if h > n then n::h::t
+    else h :: (t <-- n);;
 
 [1; 2; 3; 4; 5] <-- 3;;
 ['a'; 'b'; 'd']  <-- 'c';;
@@ -65,14 +63,12 @@ let (<--) lista n =
 [-4.; -2.; -1.] <-- -3.;;
 
 (* ZADANIE 5 *)
-let take n lista =
-  let rec tk lst res ctr =
-    if ctr <= 0 then List.rev res
-    else match lst with
-      [] -> List.rev res
-    | h::t -> tk t (h::res) (ctr-1)
-  in tk lista [] n;;
-
+let rec take n lista =
+  match lista with
+    [] -> []
+  | h::t -> 
+    if n <= 0 then [] 
+    else h::take (n-1) t;;
 
 take 2 [1; 2; 3; 5; 6];;
 take (-2) [1; 2; 3; 5; 6];;
@@ -80,13 +76,12 @@ take 8 [1; 2; 3; 5; 6];;
 take 5 ['o', 'c', 'a', 'm', 'l'];;
 
 (* ZADANIE 6 *)
-let drop n lista =
-  let rec drp lst res ctr =
-    match lst with
-      [] -> List.rev res
-    | h::t -> if ctr >= n then drp t (h::res) ctr
-              else drp t res (ctr+1)
-  in drp lista [] 0;;
+let rec drop n lista =
+  match lista with
+    [] -> []
+  | h::t ->
+    if n > 0 then drop (n-1) t
+    else lista;; 
 
 drop 2 [1; 2; 3; 5; 6];;
 drop (-2) [1; 2; 3; 5; 6];;
@@ -106,7 +101,7 @@ let replicate lista =
              res
     in match lista with
       [] -> []
-    | _ -> repl lista (List.hd lista) [];;
+    | h::t -> repl lista h [];;
 
 replicate [1; 0; 4; -2; 3];;
 replicate [];;
