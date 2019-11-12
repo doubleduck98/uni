@@ -1,7 +1,7 @@
 use std::collections::VecDeque;
 
 fn main() {
-    println!("Hello, world!");
+    println!("{:?}", testing(10, 22));
 }
 
 fn dbl_linear(n: u32) -> u32 {
