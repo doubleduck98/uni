@@ -8,7 +8,6 @@ function createFs1(n) { // tworzy tablicę n funkcji
     };
     return fs;
 }
-
 var myfs = createFs1(10);
 console.log(myfs[0]()); // zerowa funkcja miała zwrócić 0
 console.log(myfs[2]()); // druga miała zwrócić 2

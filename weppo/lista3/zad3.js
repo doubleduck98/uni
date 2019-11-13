@@ -24,3 +24,7 @@ forEach(a, _ => { console.log(_); });
 console.log(filter(a, _ => _ < 3));
 map(a, _ => _ * 2);
 console.log(a);
+map(a, function (x) {
+    return x/2;
+})
+console.log(a)
