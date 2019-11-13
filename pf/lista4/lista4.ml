@@ -52,6 +52,28 @@ let store tree =
     | N(l, r), xs -> str(l, str(r, None::xs))
   in str (tree, []);;
 
-let d = N(L(1), N(L(2), L(3)));;
+let d = N(L 1, N(L 2, L 3));;
+let dd = N(N(L 1, N(L 4,L 5)), L 3);;
+let ddd = N(N(N(L 1,L 2),N(L 3, L 4)),N(N(L 5, L 6),N(L 7, L 8)));;
 
 store d;;
+store dd;;
+store ddd;;
+
+(* ZADANIE 6 *)
+let load lista =
+  let rec ld lst stos =
+    match lst with
+      [] -> if List.length stos = 1 then List.hd stos else failwith "Load"
+    | Some x::xs -> ld xs (L x :: stos)
+    | None::xs ->
+      match stos with
+        r::l::tl -> ld xs (N(l, r) :: tl)
+      | [] | [_] -> failwith "Load"
+  in ld lista [];;
+
+load (store d);;
+load (store dd);;
+load (store ddd);;
+load [None; None];;
+load [Some 1; Some 2; None; Some 3];;
