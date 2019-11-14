@@ -90,18 +90,16 @@ drop 0 ['o', 'c', 'a', 'm', 'l'];;
 
 (* ZADANIE 7 *)
 let replicate lista =
-  let rec repl lst ctr res =
+  let rec repl lst ctr =
     match lst with
-      [] -> List.rev res
+      [] -> []
     | h::t ->
-      if ctr > 0 
-        then repl lst (ctr-1) (h::res)
-        else repl t
-             (if t != [] then (List.hd t) else -1)
-             res
+      if ctr > 0
+        then h::repl lst (ctr-1)
+        else if t = [] then [] else repl t (List.hd t)
     in match lista with
       [] -> []
-    | h::t -> repl lista h [];;
+    | h::t -> repl lista h;;
 
 replicate [1; 0; 4; -2; 3];;
 replicate [];;
