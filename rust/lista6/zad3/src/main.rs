@@ -20,3 +20,44 @@ fn print(n: i32) -> Option<String> {
     }
     Some(res)
 }
+
+#[test]
+fn test0() {
+    assert_eq!(print(3), Some(" *\n***\n *\n".to_string()));
+}
+#[test]
+fn test1() {
+    assert_eq!(print(5), Some("  *\n ***\n*****\n ***\n  *\n".to_string()));
+}
+#[test]
+fn test2() {
+    assert_eq!(print(-3), None);
+}
+#[test]
+fn test3() {
+    assert_eq!(print(2), None);
+}
+#[test]
+fn test4() {
+    assert_eq!(print(0), None);
+}
+#[test]
+fn test5() {
+    assert_eq!(print(1), Some("*\n".to_string()));
+}
+#[test]
+fn test6() {
+    assert_eq!(print(4), None);
+}
+#[test]
+fn test7() {
+    assert_eq!(print(6), None);
+}
+#[test]
+fn test8() {
+    assert_eq!(print(5), Some("  *\n ***\n*****\n ***\n  *\n".to_string()));
+}
+#[test]
+fn test9() {
+    assert_eq!(print(10), None);
+}
