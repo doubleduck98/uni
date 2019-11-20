@@ -11,7 +11,7 @@ let lhd = function LNil -> failwith "lhd" | LCons (x, _) -> x;;
 let rec ltake = function
     (0, _) -> []
   | (_, LNil) -> []
-  | (n, LCons(x,xf)) -> x::ltake(n-1, xf());;
+  | (n, LCons(x,fx)) -> x::ltake(n-1, fx());;
 
 (* ZADANIE 1 *)
 let fibonacci =
@@ -40,5 +40,43 @@ ltake(7, lrepeat (fun x-> x) (toLazyList [1; 2; 3]));;
 ltake(997, lrepeat (fun x -> 5) (LCons(0, fun () -> LNil)));;
 
 (* ZADANIE 3 *)
+let sublist xs ll =
+  let rec sbl = function    
+      (_, LNil, _) -> LNil
+    | ([], ll, _) -> ll
+    | (h::t, LCons(x, fx), i) -> 
+      if h = i
+        then sbl(t, fx(), i+1)
+        else LCons(x, function() -> sbl(h::t, fx(), i+1))
+  in sbl(List.sort compare xs, ll, 0);;
+                                   
+ltake(10, sublist [1;4;7;2] (lfrom 10));;  
+ltake(10, sublist [] (lfrom 10));;  
+ltake(10, sublist [9; 8; 1; 0] (lfrom 1));;
 
+(* ZADANIE 4 *)
+let toLBST xs =
+  let rec ins2LBST = function
+    (k, LNode(x, l, r)) -> 
+      if k < x then LNode(x, lazy(ins2LBST(k, Lazy.force l)), r)
+      else LNode(x, l, lazy(ins2LBST(k, Lazy.force r)))
+  | (k, LEmpty) -> LNode(k, lazy LEmpty, lazy LEmpty)
+  in match xs with
+    h::t -> ins2LBST(h, toLBST t)
+  | [] -> LEmpty;;
 
+let lbst = toLBST [9; 9; 7];;
+let lbstt = toLBST [];;
+let lbsttt = toLBST[-5; -4 ; 2; 1];;
+let lbstttt = toLBST[4; 6; 5; 2; 3; 1];;
+
+let inorder lbt =
+  let rec ino = function
+      (LEmpty, xs) -> xs
+    | (LNode(x, l, r), xs) -> ino(Lazy.force l, x::ino(Lazy.force r, xs))
+  in ino(lbt, []);;
+
+inorder (lbst);;
+inorder (lbstt);;
+inorder (lbsttt);;
+inorder (lbstttt);;
