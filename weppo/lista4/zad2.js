@@ -7,10 +7,10 @@ var Tree = function (v, l, r) {
 function* treeGen(tree) {
     if (tree == null)
         return;
-    if (tree.left != null)
-        yield* treeGen(tree.left);
     if (tree.val != null)
         yield tree.val;
+    if (tree.left != null)
+        yield* treeGen(tree.left);
     if (tree.left != null)
         yield* treeGen(tree.right);
 }
