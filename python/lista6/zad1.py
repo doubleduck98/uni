@@ -14,10 +14,9 @@ def find_python(url):
         print(f'nieznany błąd podczas łączenia się z {url}')
         raise
     finally:
-        # For example r'\bfoo\b' matches 'foo', 'foo.', '(foo)', 'bar foo baz' but not 'foobar' or 'foo3'
-        py = re.compile(r'\bpython\b', re.IGNORECASE)
+        py = re.compile(r'python', re.IGNORECASE)
         site = BeautifulSoup(url_contents, features='html.parser')
-        return len(py.findall(str(site.getText)))
+        return len(py.findall(site.get_text()))
 
 
 def gather_urls(current_url, distance, urls):
