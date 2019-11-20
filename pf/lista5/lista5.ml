@@ -55,7 +55,7 @@ ltake(10, sublist [] (lfrom 10));;
 ltake(10, sublist [9; 8; 1; 0] (lfrom 1));;
 
 (* ZADANIE 4 *)
-let toLBST xs =
+let rec toLBST xs =
   let rec ins2LBST = function
     (k, LNode(x, l, r)) -> 
       if k < x then LNode(x, lazy(ins2LBST(k, Lazy.force l)), r)
