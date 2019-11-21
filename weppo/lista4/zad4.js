@@ -1,3 +1,3 @@
 const a = require('./zad4a.js');
 
-a.a();
+a.a(20);

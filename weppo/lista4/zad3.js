@@ -11,6 +11,5 @@ Foo.prototype.Bar = function () {
 }
 
 var x = new Foo();
-
 x.Bar();
 // x.Qux(); // error daje

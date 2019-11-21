@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-var rl = readline.createInterface({
+const rl = readline.createInterface({
     input: fs.createReadStream('./lista4/logi.txt')
 })
 
@@ -15,7 +15,6 @@ rl.on('line', (input) => {
 });
 
 rl.on('close', () => {
-    rl.close();
     var sorted = Object.entries(ipmap).sort((a, b) => {
         return b[1] - a[1];
     });
