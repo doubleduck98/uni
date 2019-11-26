@@ -13,7 +13,7 @@ fn alphabet_position(text: &str) -> String {
     res = res
         .chars()
         .map(|c| format!("{} ", (c as u32) - ('a' as u32) + 1))
-        .collect::<String>;
+        .collect::<String>();
     res.trim_end().to_string()
 }
 
