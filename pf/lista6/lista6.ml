@@ -22,7 +22,7 @@ let zgadnij ()=
     end
   done;;
 
-zgadnij ();;
+  (* zgadnij ();; *)
 
 (* ZADANIE 2 *)
 type 'a bt = Empty | Node of 'a * 'a bt * 'a bt;;
@@ -56,3 +56,33 @@ printBT t;;
 printBT tt;;
 printBT Empty;;
 
+(* ZADANIE 3 *)
+let sortuj_plik() =
+  begin
+    print_string "nazwa pliku: ";
+    let input = read_line() in
+    print_string "wyjscie :";
+    let output = read_line() in
+    let infile = open_in input in
+    let liczbaElementow = ref (int_of_string(input_line infile)) in
+    let elementy = ref (Array.make !liczbaElementow 0) in
+    let i = ref 0 in
+    while !liczbaElementow > 0 do
+      !elementy.(!i) <- int_of_string(input_line infile);
+      i := !i + 1;
+      liczbaElementow := !liczbaElementow - 1;
+    done;
+    close_in infile;
+    Array.sort compare !elementy;
+    let outfile = open_out output in
+    let j = ref 0 in
+    while !i > 0 do
+      output_string outfile (string_of_int !elementy.(!j));
+      output_string outfile "\n";
+      j := !j + 1;
+      i := !i - 1;
+    done;
+    close_out outfile;
+  end;;
+
+sortuj_plik();;
