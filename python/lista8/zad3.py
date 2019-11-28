@@ -29,7 +29,7 @@ x, y = rows // 2, cols // 2
 # ustawiamy mrówke
 grid[x][y] = 0
 last = Move.north
-current = 1 #stoimy na białym
+current = 1  # stoimy na białym
 
 
 fig = plt.figure(num='Mrówka Langtona')
@@ -39,7 +39,6 @@ plt.yticks([])
 
 
 def ant_move(grid):
-    global x, y, current
 
     def move_right():  # jestesmy na czarnym, ustawiamy na białe
         global x, y, last, rows, cols
@@ -103,6 +102,7 @@ def ant_move(grid):
             last = Move.south
             return curr
 
+    global x, y, current
     if current == 1:  # stoimy na białym polu
         current = move_left()
     else:
@@ -111,7 +111,6 @@ def ant_move(grid):
 
 
 def animate(nth_frame):
-    global x, y
     new_grid = ant_move(im.get_array())
     im.set_array(new_grid)
     frame = plt.text(1, 4, f'step: {nth_frame}')
