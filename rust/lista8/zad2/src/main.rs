@@ -33,10 +33,7 @@ fn test1() {
 }
 #[test]
 fn test2() {
-    assert_eq!(
-        alphabet_position(""),
-        "".to_string()
-    );
+    assert_eq!(alphabet_position(""), "".to_string());
 }
 #[test]
 fn test3() {
@@ -47,10 +44,7 @@ fn test3() {
 }
 #[test]
 fn test4() {
-    assert_eq!(
-        alphabet_position("Czesc."),
-        "3 26 5 19 3".to_string()
-    );
+    assert_eq!(alphabet_position("Czesc."), "3 26 5 19 3".to_string());
 }
 #[test]
 fn test5() {
