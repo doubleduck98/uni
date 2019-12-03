@@ -28,7 +28,7 @@ static int command(char **argv, bool bg) {
     while (true) {
       exitcode = jobdone(jid);
       /* TODO: If job is not done then wait for SIGCHLD, otherwise break. */
-      if(exitcode > 0){
+      if(exitcode >= 0){
         break;
       } else {
         Sigsuspend(&prev_mask);
