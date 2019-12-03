@@ -48,24 +48,25 @@ noreturn void external_command(char **argv) {
   const char *path = getenv("PATH");
   
   if (!index(argv[0], '/') && path) {
-    /* TODO: For all paths in PATH construct an absolute path and execve it. */
-    char* dup = strdup(path);
-    char* new_path = dup;
-    int dlug_path = strlen(new_path);
-    size_t duwkropek = 0;
-    while(dlug_path > 0) {
-      duwkropek = strcspn(new_path, ":");
-      char *prog = strndup(new_path, duwkropek);
-      strapp(&prog, "/");
-      strapp(&prog, argv[0]);
-      (void)execve(prog, argv, environ);
-      new_path = new_path + duwkropek;
-      if(strlen(new_path) > 0) new_path += 1;
-      dlug_path = strlen(new_path);
-      free(prog);
+    char *path_iter = strdup(path);
+    char *path_dup = path_iter;
+    size_t path_len = strlen(path_iter);
+    size_t colon_pos;
+    
+    while(path_len > 0) {
+      colon_pos = strcspn(path_iter, ":");
+      char *path_part = strndup(path_iter, colon_pos);
+      strapp(&path_part, "/");
+      strapp(&path_part, argv[0]);
+      (void)execve(path_part, argv, environ);
+      path_iter += colon_pos;
+      if (strlen(path_iter) > 0)
+        path_iter++;
+      path_len = strlen(path_iter);
+      free(path_part);
     }
-    free(dup);
-    // free new path pls
+    free(path_dup);
+    
   } else {
     (void)execve(argv[0], argv, environ);
   }

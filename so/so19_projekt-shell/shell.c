@@ -18,6 +18,7 @@ static int command(char **argv, bool bg) {
   if (pid == 0) {
     /* TODO: Restore signal mask and put new process into separate group. */
     Sigprocmask(SIG_SETMASK, &prev_mask, NULL);
+    setpgid(0, 0);
     external_command(argv);
   }
 
@@ -29,6 +30,8 @@ static int command(char **argv, bool bg) {
       /* TODO: If job is not done then wait for SIGCHLD, otherwise break. */
       if(exitcode > 0){
         break;
+      } else {
+        Sigsuspend(&prev_mask);
       }
     }
   }

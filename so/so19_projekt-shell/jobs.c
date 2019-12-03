@@ -14,7 +14,6 @@ static void sigchld_handler(int sig) {
   int status;
   /* TODO: Bury all children that finished saving their status in jobs. */
   while((pid = waitpid(-1, &status, WNOHANG)) > 0) {
-    msg("xDD %d\n", pid);
     for(size_t i = 0; i < njobmax; i++) {
       if(jobs[i].pid == pid) {
         jobs[i].status = status;
