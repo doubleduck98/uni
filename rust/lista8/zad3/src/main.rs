@@ -9,7 +9,7 @@ fn dec2_fact_string(nb: u64) -> String {
         let mut vec = vec![];
         let mut cur = 1;
         let mut ctr = 0;
-        while cur < nb {
+        while cur <= nb {
             vec.push(cur);
             ctr += 1;
             cur *= ctr;

@@ -47,8 +47,12 @@ impl MorseDecoder {
 
     fn decode_morse(&self, encoded: &str) -> String {
         let mut res = Vec::new();
-        for word in encoded.trim().split("  ") {
-            res.push(word.split_whitespace().map(|ch| self.morse_code.get(ch).unwrap().to_string()).collect::<String>());
+        for word in encoded.trim().split("   ") {
+            res.push(
+                word.split_whitespace()
+                    .map(|ch| self.morse_code.get(ch).unwrap().to_string())
+                    .collect::<String>(),
+            );
         }
         res.join(" ")
     }
