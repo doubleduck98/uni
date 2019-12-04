@@ -1,6 +1,5 @@
 (* SZYMON ZIENKIEWICZ *)
 (* ZADANIE 4 *)
-(* NIEDOKOŃCZONE *)
 module type DICTIONARY =
   sig
     type key (* type of keys *)
@@ -107,5 +106,9 @@ module StringDict = Slownik(StringOrder);;
 let d = StringDict.empty();;
 let ( <| ) d (k,x) = StringDict.insert d (k,x);;
 
-let d = d <| ("jp", 997) <| ("essa", 4);;
-StringDict.lookup d "jp";;
+let d = d <| ("xd", 997) <| ("essa", 4) <| ("aaa", 5);;
+StringDict.lookup d "xd";;
+let d = StringDict.update d ("xd", 42);;
+StringDict.lookup d "xd";;
+let d = StringDict.delete d "xd";;
+StringDict.lookup d "xd";;
