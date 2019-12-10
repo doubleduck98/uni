@@ -17,14 +17,21 @@ node_t *new_node(long value) {
 
 #define N 10
 
+// int main(void) {
+//   list_t head;
+//   for (int i = 0; i < N; i++)
+//     SLIST_INSERT_HEAD(&head, new_node(i), link);
+//   free(SLIST_FIRST(&head));
+//   return 0;
+// }
+
 int main(void) {
-  list_t head;
-  for (int i = 0; i < N; i++){
+  list_t head = { .slh_first = NULL };
+  for (int i = 0; i < N; i++) {
     node_t *new = new_node(i);
     SLIST_INSERT_HEAD(&head, new, link);
   }
-  // nie działa predykat slist_empty
-  for (int i = 0; i < N; i++){
+  while(!SLIST_EMPTY(&head)) {
     node_t *c = SLIST_FIRST(&head);
     SLIST_REMOVE_HEAD(&head, link);
     free(c);
