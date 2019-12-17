@@ -6,11 +6,11 @@ data Tree a = Leaf a | Node (Tree a) (Tree a)
 isBalanced :: Tree a -> Bool
 isBalanced (Leaf _) = True
 isBalanced (Node l r) =
-    abs((leafs l) - (leafs r)) <= 1
+    abs(leaves l - leaves r) <= 1
     && isBalanced l && isBalanced r
     where
-        leafs (Leaf _)   =  1
-        leafs (Node l r) = (leafs l) + (leafs r)
+        leaves (Leaf _)   =  1
+        leaves (Node l r) = leaves l + leaves r
 
 t1 = Node
     (Node (Leaf 1) (Leaf 1))
@@ -21,6 +21,17 @@ t2 = Node
         (Node (Leaf 2) (Leaf 2))
         (Leaf 1))
     (Leaf 0)
+
+-- ZADANIE 2
+balance :: [a] -> Tree a
+balance [x] = Leaf x
+balance xs = Node (balance ys) (balance zs)
+        where
+            (ys, zs) = halve xs
+            halve xs = splitAt (length xs `div` 2) xs
+
+l1 = [0, 1, 1, 2, 2]
+l2 = [5, 4, 3, 2, 1, 0, (-1), (-2), (-3)]
 
 -- ZADANIE 3
 data BTree a = BLeaf | BNode (BTree a) a (BTree a)
