@@ -6,7 +6,7 @@ fn main() {
 }
 
 fn change(s: &str, prog: &str, version: &str) -> String {
-    let ver = Regex::new(r"Version: (?P<vn>\d+\.\d+)\n")
+    let ver = Regex::new(r"Version: (\d+\.\d+)\n")
         .unwrap()
         .captures(s);
     let phone = Regex::new(r"Phone: (\+1-\d{3}-\d{3}-\d{4})\n")
@@ -15,9 +15,7 @@ fn change(s: &str, prog: &str, version: &str) -> String {
     if ver.is_none() || phone.is_none() {
         return String::from("ERROR: VERSION or PHONE");
     }
-    // to nie działa na codewars, ale działa u mnie
-    if ver.unwrap().get(2).map_or("", |m| m.as_str()) == "2.0" {
-    // if ver.unwrap().name("vn").map_or("", |m| m.as_str()) == "2.0" {
+    if ver.unwrap().get(1).map_or("", |m| m.as_str()) == "2.0" {
         format!(
             "Program: {} Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: 2.0",
             prog
