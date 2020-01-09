@@ -26,7 +26,7 @@ finished :: [Int] -> Bool
 finished = all (== 0)
 
 valid :: [Int] -> Int -> Int -> Bool
-valid board row num = board !! (row-1) >= num
+valid board row num = (board !! (row-1) >= num) && num > 0
 
 move :: [Int] -> Int -> Int -> [Int]
 move board row num = mv board [] 1 where
@@ -72,7 +72,7 @@ comp board =
     else do
         let row = takeLast (reverse board) (length board)
         let num = board !! (row - 1)
-        putStrLn ("usuwam " ++ (show num) ++ " * z " ++ (show row) ++ " rzedu")
+        putStrLn ("zabieram " ++ (show num) ++ " * z " ++ (show row) ++ " rzedu")
         let newBoard = move board row num
         printnim newBoard
         player newBoard
