@@ -7,8 +7,8 @@ randomInts n (lo, hi) zarodek = take n (randomRs (lo, hi) (mkStdGen zarodek))
 randomIntIO :: (Int, Int) -> IO Int
 randomIntIO (lo, hi) = randomRIO (lo, hi)
 
-row :: Int -> String
-row n = concat (replicate n "*")
+rowStr :: Int -> String
+rowStr n = concat (replicate n "*")
 
 printnim :: [Int] -> IO()
 printnim nim = prnt nim 1 where
@@ -16,7 +16,7 @@ printnim nim = prnt nim 1 where
     prnt (x:xs) rw = do
         putStr (show rw)
         putStr ": "
-        putStrLn (row x)
+        putStrLn (rowStr x)
         prnt xs (rw + 1)
 
 initnim :: Int -> [Int]
