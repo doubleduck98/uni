@@ -22,3 +22,6 @@ cmake_install.cmake
 #cargo
 target/
 **/*.rs.bk
+
+#npm
+node_modules/
