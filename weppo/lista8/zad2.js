@@ -10,21 +10,29 @@ const cn = {
 
 const db = pgp(cn);
 
-function select() {
-    return new Promise((result, rejected) => {
-        db.one('SELECT * FROM osoba')
-            .then(data => {
-                result(data);
-            })
-            .catch(error => {
-                rejected(error);
-            });
+// any(query, valuesopt) → {external:Promise.<Array>}
+let select = db.any('SELECT * FROM osoba')
+    .then(function (data) {
+        console.log(data);
+        return data;
+    })
+    .catch(function (error) {
+        console.log(error);
     });
+
+function insert(name, surname, pesel, sex) {
+    return db.one(`INSERT INTO osoba (name, surname, PESEL, sex) VALUES ('${name}', '${surname}', '${pesel}', '${sex}') RETURNING id`)
+        .then(data => {
+            console.log(data.id);
+        })
+        .catch(error => {
+            console.log('ERROR:', error);
+        });
 }
 
 async function res() {
-    let res = await select();
-    console.log(res);
+    await select;
+    await insert('Lewis', 'Hamilton', '85010789344', 'M');
 }
 
 res();
