@@ -15,3 +15,8 @@ CREATE TABLE miejsce_pracy (
   name VARCHAR NOT NULL
 );
 ALTER TABLE osoba ADD COLUMN id_praca SERIAL REFERENCES miejsce_pracy(id);
+-- ZADANIE 5
+CREATE TABLE osoba_miejsca (
+  id_osoba INT NOT NULL REFERENCES osoba(id),
+  id_praca INT NOT NULL REFERENCES miejsce_pracy(id)
+);

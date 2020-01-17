@@ -17,14 +17,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -35,7 +35,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: miejsce_pracy; Type: TABLE; Schema: public; Owner: -
+-- Name: miejsce_pracy; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.miejsce_pracy (
@@ -44,8 +44,10 @@ CREATE TABLE public.miejsce_pracy (
 );
 
 
+ALTER TABLE public.miejsce_pracy OWNER TO postgres;
+
 --
--- Name: miejsce_pracy_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: miejsce_pracy_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.miejsce_pracy_id_seq
@@ -57,15 +59,17 @@ CREATE SEQUENCE public.miejsce_pracy_id_seq
     CACHE 1;
 
 
+ALTER TABLE public.miejsce_pracy_id_seq OWNER TO postgres;
+
 --
--- Name: miejsce_pracy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: miejsce_pracy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.miejsce_pracy_id_seq OWNED BY public.miejsce_pracy.id;
 
 
 --
--- Name: osoba; Type: TABLE; Schema: public; Owner: -
+-- Name: osoba; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.osoba (
@@ -78,8 +82,10 @@ CREATE TABLE public.osoba (
 );
 
 
+ALTER TABLE public.osoba OWNER TO postgres;
+
 --
--- Name: osoba_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: osoba_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.osoba_id_seq
@@ -91,40 +97,55 @@ CREATE SEQUENCE public.osoba_id_seq
     CACHE 1;
 
 
+ALTER TABLE public.osoba_id_seq OWNER TO postgres;
+
 --
--- Name: osoba_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: osoba_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.osoba_id_seq OWNED BY public.osoba.id;
 
 
 --
--- Name: miejsce_pracy id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: osoba_miejsca; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.osoba_miejsca (
+    id_osoba integer NOT NULL,
+    id_praca integer NOT NULL
+);
+
+
+ALTER TABLE public.osoba_miejsca OWNER TO postgres;
+
+--
+-- Name: miejsce_pracy id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.miejsce_pracy ALTER COLUMN id SET DEFAULT nextval('public.miejsce_pracy_id_seq'::regclass);
 
 
 --
--- Name: osoba id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: osoba id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.osoba ALTER COLUMN id SET DEFAULT nextval('public.osoba_id_seq'::regclass);
 
 
 --
--- Data for Name: miejsce_pracy; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: miejsce_pracy; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.miejsce_pracy (id, name) FROM stdin;
 1	fajne korpo
 2	niefajne korpo
 7	kierowca wyscigowy
+11	inzynier wyscigowy
 \.
 
 
 --
--- Data for Name: osoba; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: osoba; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.osoba (id, name, surname, pesel, sex, id_miejsce_pracy) FROM stdin;
@@ -132,26 +153,36 @@ COPY public.osoba (id, name, surname, pesel, sex, id_miejsce_pracy) FROM stdin;
 9	Charles	Leclerc	96747385846	M	2
 2	Max	Verstappen	97042185733	M	2
 1	Szymon	Zienkiewicz 	98111699742	M	1
-12	Kimi	Raikkonen	791017	M	7
+16	Peter	Bonnington	83021388943	M	11
+12	Kimi	Raikkonen	79101700234	M	7
 \.
 
 
 --
--- Name: miejsce_pracy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+-- Data for Name: osoba_miejsca; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.miejsce_pracy_id_seq', 7, true);
-
-
---
--- Name: osoba_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.osoba_id_seq', 12, true);
+COPY public.osoba_miejsca (id_osoba, id_praca) FROM stdin;
+16	11
+\.
 
 
 --
--- Name: miejsce_pracy miejsce_pracy_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: miejsce_pracy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.miejsce_pracy_id_seq', 11, true);
+
+
+--
+-- Name: osoba_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.osoba_id_seq', 16, true);
+
+
+--
+-- Name: miejsce_pracy miejsce_pracy_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.miejsce_pracy
@@ -159,7 +190,7 @@ ALTER TABLE ONLY public.miejsce_pracy
 
 
 --
--- Name: osoba osoba_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: osoba osoba_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.osoba
@@ -167,11 +198,27 @@ ALTER TABLE ONLY public.osoba
 
 
 --
--- Name: osoba osoba_id_praca_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: osoba osoba_id_praca_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.osoba
     ADD CONSTRAINT osoba_id_praca_fkey FOREIGN KEY (id_miejsce_pracy) REFERENCES public.miejsce_pracy(id);
+
+
+--
+-- Name: osoba_miejsca osoba_miejsca_id_osoba_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.osoba_miejsca
+    ADD CONSTRAINT osoba_miejsca_id_osoba_fkey FOREIGN KEY (id_osoba) REFERENCES public.osoba(id);
+
+
+--
+-- Name: osoba_miejsca osoba_miejsca_id_praca_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.osoba_miejsca
+    ADD CONSTRAINT osoba_miejsca_id_praca_fkey FOREIGN KEY (id_praca) REFERENCES public.miejsce_pracy(id);
 
 
 --
