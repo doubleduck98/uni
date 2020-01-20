@@ -5,7 +5,8 @@ const cn = {
     host: 'localhost',
     port: 5432,
     database: 'weppol8',
-    user: 'postgres'
+    user: 'postgres',
+    password: 123
 };
 
 const db = pgp(cn);
@@ -20,19 +21,19 @@ let select = db.any('SELECT * FROM osoba')
         console.log(error);
     });
 
-function insert(name, surname, pesel, sex) {
-    return db.one(`INSERT INTO osoba (name, surname, PESEL, sex) VALUES ('${name}', '${surname}', '${pesel}', '${sex}') RETURNING id`)
-        .then(data => {
-            console.log(data.id);
-        })
-        .catch(error => {
-            console.log('ERROR:', error);
-        });
+async function insert(name, surname, age, sex) {
+    try {
+        const data = await db.one(`INSERT INTO osoba (name, surname, age, sex) VALUES ('${name}', '${surname}', ${age}, '${sex}') RETURNING id`);
+        console.log(data.id);
+    }
+    catch (error) {
+        console.log('ERROR:', error);
+    }
 }
 
 async function res() {
     await select;
-    await insert('Lewis', 'Hamilton', '85010789344', 'M');
+    // await insert('Lewis', 'Hamilton', 36, 'M');
 }
 
 res();

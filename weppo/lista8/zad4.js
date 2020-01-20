@@ -5,7 +5,8 @@ const cn = {
     host: 'localhost',
     port: 5432,
     database: 'weppol8',
-    user: 'postgres'
+    user: 'postgres',
+    password: 123
 };
 
 const db = pgp(cn);

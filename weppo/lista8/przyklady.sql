@@ -3,18 +3,31 @@ CREATE TABLE osoba (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   surname VARCHAR NOT NULL,
-  PESEL BIGINT NOT NULL,
+  age INT NOT NULL,
   sex VARCHAR (1)
 );
+
+CREATE SEQUENCE osoba_id
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE;
+
+SELECT nextval('osoba_id');
+
 INSERT INTO osoba (name, surname, pesel, sex)
 VALUES
-  ('Szymon', 'Zienkiewicz ', 98111699742, 'M');
+  ('Szymon', 'Zienkiewicz ', 21, 'M');
+  
 -- ZADANIE 4\
 CREATE TABLE miejsce_pracy (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL
 );
+
 ALTER TABLE osoba ADD COLUMN id_praca SERIAL REFERENCES miejsce_pracy(id);
+
 -- ZADANIE 5
 CREATE TABLE osoba_miejsca (
   id_osoba INT NOT NULL REFERENCES osoba(id),
