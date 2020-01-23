@@ -16,7 +16,7 @@ async function dodaj() {
         const data_mp = await db.one('INSERT INTO miejsce_pracy (name) VALUES (\'kierowca wyscigowy\') RETURNING id');
         console.log(data_mp);
         try {
-            await db.none(`INSERT INTO osoba (name, surname, PESEL, sex, id_miejsce_pracy) VALUES (\'Kimi\', \'Raikkonen\', \'79101700234\', \'M\', \'${data_mp.id}\')`);
+            await db.none(`INSERT INTO osoba (name, surname, age, sex, id_miejsce_pracy) VALUES (\'Kimi\', \'Raikkonen\', \'40\', \'M\', \'${data_mp.id}\')`);
         } catch (error) {
             console.log('error przy osobie:' + error);
         }

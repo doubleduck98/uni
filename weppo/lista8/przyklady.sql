@@ -16,7 +16,7 @@ CREATE SEQUENCE osoba_id
 
 SELECT nextval('osoba_id');
 
-INSERT INTO osoba (name, surname, pesel, sex)
+INSERT INTO osoba (name, surname, age, sex)
 VALUES
   ('Szymon', 'Zienkiewicz ', 21, 'M');
   
@@ -26,7 +26,7 @@ CREATE TABLE miejsce_pracy (
   name VARCHAR NOT NULL
 );
 
-ALTER TABLE osoba ADD COLUMN id_praca SERIAL REFERENCES miejsce_pracy(id);
+ALTER TABLE osoba ADD COLUMN id_praca REFERENCES miejsce_pracy(id);
 
 -- ZADANIE 5
 CREATE TABLE osoba_miejsca (
