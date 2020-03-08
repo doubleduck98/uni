@@ -1,6 +1,5 @@
 from itertools import product
 from random import sample
-from enum import Enum
 import argparse
 
 kolorl = [
@@ -152,15 +151,17 @@ def rozdanie():
 
     reka_figuranta, wartosc_fig = losuj_talie_figuranta(), 1
     reka_blotkarza, wartosc_blt = losuj_talie_blotkarza(), 1
+    # reka_blotkarza, wartosc_blt = [('5', '♤'), ('8', '♦'), ('5', '♥'), ('8', '♤'), ('5', '♦')], 1
+    # reka_blotkarza, wartosc_blt = [('8', '♤'), ('8', '♥'), ('8', '♦'), ('8', '♧'), ('6', '♥')] , 1
 
     for test, wart in uklady:
         if eval(f'{test}(reka_figuranta)'):
-            wartosc_fig += wart
+            wartosc_fig = wart
             break
 
     for test, wart in uklady:
         if eval(f'{test}(reka_blotkarza)'):
-            wartosc_blt += wart
+            wartosc_blt = wart
             break
 
     # jezeli są takie same układy, to figurant wygrywa
