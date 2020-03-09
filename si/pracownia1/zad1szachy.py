@@ -2,22 +2,24 @@ import argparse
 from collections import deque
 
 
-# todo: -krotki
 class szachownica:
-    def __init__(self, start, prev=None):
-        self.ruch = start[0]
-        self.bialy_k = start[1]
-        self.biala_w = start[2]
-        self.czarny_k = start[3]
-        self.kroki = start[4]
+    def __init__(self, stan, prev=None):
+        self.ruch = stan[0]
+        self.bialy_k = stan[1]
+        self.biala_w = stan[2]
+        self.czarny_k = stan[3]
+        self.kroki = stan[4]
         self.poprzedni_ruch = prev
 
     # debug
     def __str__(self):
-        return f'{self.ruch}, {para_do_pozycji(self.bialy_k)}, {para_do_pozycji(self.biala_w)}, {para_do_pozycji(self.czarny_k)}, {self.kroki}'
+        return f'{self.kroki}\u00B0 {para_do_pozycji(self.bialy_k)} {para_do_pozycji(self.biala_w)} {para_do_pozycji(self.czarny_k)}'
 
-    def print(self):
-        pass
+    def format(self):
+        return [str(self.kroki) + '\u00B0',
+                para_do_pozycji(self.bialy_k),
+                para_do_pozycji(self.biala_w),
+                para_do_pozycji(self.czarny_k)]
 
 
 def pozycja_do_pary(pos):
@@ -159,15 +161,9 @@ def szachmat(st):
     return (ckx == bwx and abs(cky - bwy) > 1) or (cky == bwy and abs(ckx - bwx) > 1)
 
 
-rozwazane_ruchy = set()
-kolejka = deque()
-
-
 def partia(pocz):
-    global kolejka, rozwazane_ruchy
-
-    rozwazane_ruchy.clear()
-    kolejka.clear()
+    rozwazane_ruchy = set()
+    kolejka = deque()
     kolejka.append(pocz)
 
     while(len(kolejka) > 0):
@@ -207,6 +203,15 @@ def pierwszy_ruch(line):
     return szachownica(krotka)
 
 
+def ladnie_wypisz(res):
+    res.append(['No.', 'BK', 'BW', 'CK'])
+    szer = len(res[-2][1]) + 1
+    for res in reversed(res):
+        for st in res:
+            print(st.rjust(szer), end='')
+        print()
+
+
 DEBUG = False
 
 if __name__ == '__main__':
@@ -219,14 +224,21 @@ if __name__ == '__main__':
     parser = get_argparser()
     args = parser.parse_args()
 
-    plik_wyn = open('zad1_output.txt', 'w')
+    if not DEBUG:
+        plik_wyn = open('zad1_output.txt', 'w')
+
     with open(args.infile.name) as plik:
         for line in plik:
             r1 = pierwszy_ruch(line)
             if DEBUG:
                 res = partia(r1)
+                res_list = []
                 while res is not None:
-                    print(res)
+                    res_list.append(res.format())
                     res = res.poprzedni_ruch
+                ladnie_wypisz(res_list)
             else:
                 plik_wyn.write(str(partia(r1)))
+    
+    if not DEBUG:
+        plik_wyn.close()
