@@ -10,7 +10,6 @@ def przeroblinie(linia):
     literki.append('')
     for literka in linia:
         literki.append(literka)
-    # print(literki[1:])
 
     # S[n] jest true jak istnieje podciąg będący słowem kończący się w n
     S = [False for _ in range(len(literki))]
@@ -18,9 +17,7 @@ def przeroblinie(linia):
     for k in range(1, len(literki)):
         for j in range(1, k+1):
             if ''.join(literki[j:k+1]) in SLOWA:
-                # print(''.join(literki[j:k+1]))
                 S[k] = True
-    # print(S[1:])
 
     # D[n] początki slowa kończącego się w n
     D = [[] for _ in range(len(literki))]
@@ -31,11 +28,10 @@ def przeroblinie(linia):
 
     # comp -> lista możliwych początków, numer, literka
     comp = [[D[x], x, literki[x]] for x in range(len(literki))]
-    # for x in comp:
-    #     print(x)
+
     # teraz dla kazdej literki mamy początki słowa, które ta literka kończy
     # i znajdujemy ciągi poprawnych wyrazów maxujące sumy kwadratow
-    
+
     # max_sum -> suma, poczatek, literka
     dp = [[0, -1, literki[x]] for x in range(len(literki))]
     for akt in range(1, len(literki)):
@@ -53,9 +49,6 @@ def przeroblinie(linia):
                 max_pocz = comp[pocz][1]
         dp[akt][0] = akt_suma
         dp[akt][1] = max_pocz
-    
-    # for x in dp:
-    #     print(x)
 
     return dobre_zdanie(dp, literki)
 
@@ -70,7 +63,7 @@ def dobre_zdanie(dp, literki):
         koniec = pocz-1
     for slowo in reversed(res):
         sl = ''.join(slowo)
-        ret += sl +' '
+        ret += sl + ' '
     return ret
 
 
@@ -88,5 +81,3 @@ if __name__ == '__main__':
             res.write(f'{przerobiona}\n')
 
     res.close()
-
-# przeroblinie('tymczasemprzenośmojąduszęutęsknioną')
