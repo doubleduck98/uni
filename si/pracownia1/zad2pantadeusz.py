@@ -1,6 +1,3 @@
-from collections import deque
-
-
 # zbiór wszystkich slow ze slownika
 SLOWA = set()
 
@@ -32,7 +29,7 @@ def przeroblinie(linia):
     # teraz dla kazdej literki mamy początki słowa, które ta literka kończy
     # i znajdujemy ciągi poprawnych wyrazów maxujące sumy kwadratow
 
-    # max_sum -> suma, poczatek, literka
+    # dp -> suma, poczatek, literka
     dp = [[0, -1, literki[x]] for x in range(len(literki))]
     for akt in range(1, len(literki)):
         poczatki = comp[akt][0]
