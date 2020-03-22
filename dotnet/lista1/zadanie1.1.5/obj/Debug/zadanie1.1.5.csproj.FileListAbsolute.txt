@@ -1,5 +1,0 @@
-X:\uni\dotnet\lista1\zadanie1.1.5\bin\Debug\zadanie1.1.5.exe
-X:\uni\dotnet\lista1\zadanie1.1.5\bin\Debug\zadanie1.1.5.pdb
-X:\uni\dotnet\lista1\zadanie1.1.5\obj\Debug\zadanie1.1.5.csprojAssemblyReference.cache
-X:\uni\dotnet\lista1\zadanie1.1.5\obj\Debug\zadanie1.1.5.exe
-X:\uni\dotnet\lista1\zadanie1.1.5\obj\Debug\zadanie1.1.5.pdb
