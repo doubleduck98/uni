@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\szipi\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\szipi\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_lista1.-695665778.00" t="ExcludeRecursive" />
+    <e p="X:\uni\dotnet\lista1" t="IncludeFlat">
+      <e p="lista1.sln" t="IncludeFlat" />
+      <e p="zadanie1.1.1" t="IncludeRecursive">
+        <e p="zadanie1.1.1.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="zadanie1.1.2" t="IncludeRecursive">
+        <e p="zadanie1.1.2.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="zadanie1.1.5" t="IncludeRecursive">
+        <e p="zadanie1.1.5.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
