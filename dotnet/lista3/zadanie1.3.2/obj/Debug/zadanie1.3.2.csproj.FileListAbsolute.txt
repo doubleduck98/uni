@@ -3,3 +3,8 @@ X:\uni\dotnet\lista3\zadanie1.3.2\bin\Debug\zadanie1._3._2.exe
 X:\uni\dotnet\lista3\zadanie1.3.2\bin\Debug\zadanie1._3._2.pdb
 X:\uni\dotnet\lista3\zadanie1.3.2\obj\Debug\zadanie1._3._2.exe
 X:\uni\dotnet\lista3\zadanie1.3.2\obj\Debug\zadanie1._3._2.pdb
+D:\uni\dotnet\lista3\zadanie1.3.2\bin\Debug\zadanie1._3._2.exe
+D:\uni\dotnet\lista3\zadanie1.3.2\bin\Debug\zadanie1._3._2.pdb
+D:\uni\dotnet\lista3\zadanie1.3.2\obj\Debug\zadanie1.3.2.csprojAssemblyReference.cache
+D:\uni\dotnet\lista3\zadanie1.3.2\obj\Debug\zadanie1._3._2.exe
+D:\uni\dotnet\lista3\zadanie1.3.2\obj\Debug\zadanie1._3._2.pdb

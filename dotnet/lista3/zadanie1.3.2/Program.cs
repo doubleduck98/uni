@@ -12,7 +12,7 @@ namespace zadanie1._3._2
             var liczby = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "liczby.txt"));
             foreach (var l in from liczba in liczby
                 where int.Parse(liczba) > 100
-                orderby -int.Parse(liczba)
+                orderby int.Parse(liczba) descending
                 select liczba)
             {
                 Console.WriteLine(l);
