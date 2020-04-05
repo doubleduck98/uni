@@ -15,11 +15,13 @@ namespace zadanie1._3._3
                 Console.WriteLine(nazwisko);
             }
 
-            var literki = from nazwisko in nazwiska
+            var literki = 
+                from nazwisko in nazwiska
                 group nazwisko by nazwisko[0]
                 into pierwszeLiterki
                 orderby pierwszeLiterki.Key
                 select pierwszeLiterki.Key;
+            
             foreach (var l in literki)
             {
                 Console.WriteLine(l);
