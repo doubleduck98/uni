@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Security.AccessControl;
 
 namespace zadanie1._3._7
 {
