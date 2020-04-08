@@ -1,6 +1,5 @@
 import sys
 import heapq as hq
-from collections import deque
 
 labirynt = list()
 odleglosci = list()
@@ -17,17 +16,17 @@ class stan:
         return len(self.kroki) < len(other.kroki)
 
 
-# odległości taksówkowe od najbliższego celu
+# odległości od najbliższego celu
 def init_odl():
 
-    def dj(xy):
-        q = deque()
+    def xd(xy):
+        q = []
         visited = set()
         visited.add(xy)
-        q.append((xy, 0))
+        hq.heappush(q, (0, xy))
 
         while q:
-            curr_xy, odl = q.popleft()
+            odl, curr_xy = hq.heappop(q)
             x, y = curr_xy[0], curr_xy[1]
 
             if curr_xy in cele:
@@ -38,12 +37,16 @@ def init_odl():
             for nxy in nxys:
                 if nxy not in visited and labirynt[nxy[0]][nxy[1]] != '#':
                     visited.add(nxy)
-                    q.append((nxy, odl+1))
+                    hq.heappush(q, (odl+1, nxy))
+
+    odleglosci = labirynt.copy()
 
     for i in range(len(odleglosci)):
         for j in range(len(odleglosci[i])):
             if odleglosci[i][j] != '#':
-                odleglosci[i][j] = dj((i, j))
+                odleglosci[i][j] = xd((i, j))
+
+    return odleglosci
 
 
 # cele i pozycje startowe komandosów
@@ -100,7 +103,8 @@ def koniec(st):
 def znajdz_ruchy(st):
     # heurystyka
     def heura(st):
-        return len(st.kroki) + max([(odleglosci[x][y]) for x, y in st.komandosi])
+        # można dodawać współczynniki przed len i sum
+        return len(st.kroki) + sum([odleglosci[x][y] for x, y in st.komandosi])
 
     q = []
     hq.heappush(q, (heura(st), [st]))
@@ -136,13 +140,10 @@ if __name__ == '__main__':
             labirynt.append(l)
 
     st = init()
-
-    odleglosci = labirynt.copy()
-    init_odl()
-
-    k = znajdz_ruchy(st)
-    print(k)
+    odleglosci = init_odl()
+    zwycieski_plan = znajdz_ruchy(st)
+    print(zwycieski_plan)
 
     res = open('./zad_output.txt', 'w')
-    res.write(k)
+    res.write(zwycieski_plan)
     res.close()

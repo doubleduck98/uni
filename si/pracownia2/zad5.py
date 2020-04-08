@@ -16,10 +16,10 @@ class stan:
         return len(self.kroki) < len(other.kroki)
 
 
-# odległości taksówkowe od najbliższego celu
+# odległości od najbliższego celu
 def init_odl():
 
-    def dj(xy):
+    def xd(xy):
         q = []
         visited = set()
         visited.add(xy)
@@ -39,10 +39,14 @@ def init_odl():
                     visited.add(nxy)
                     hq.heappush(q, (odl+1, nxy))
 
+    odleglosci = labirynt.copy()
+
     for i in range(len(odleglosci)):
         for j in range(len(odleglosci[i])):
             if odleglosci[i][j] != '#':
-                odleglosci[i][j] = dj((i, j))
+                odleglosci[i][j] = xd((i, j))
+
+    return odleglosci
 
 
 # cele i pozycje startowe komandosów
@@ -99,7 +103,7 @@ def koniec(st):
 def znajdz_ruchy(st):
     # heurystyka
     def heura(st):
-        return len(st.kroki) + max([(odleglosci[x][y]) for x, y in st.komandosi])
+        return len(st.kroki) + max([odleglosci[x][y] for x, y in st.komandosi])
 
     q = []
     hq.heappush(q, (heura(st), [st]))
@@ -135,15 +139,10 @@ if __name__ == '__main__':
             labirynt.append(l)
 
     st = init()
-
-    odleglosci = labirynt.copy()
-    init_odl()
-    # for o in odleglosci:
-    #     print(*o)
-
-    k = znajdz_ruchy(st)
-    print(k)
+    odleglosci = init_odl()
+    zwycieski_plan = znajdz_ruchy(st)
+    print(zwycieski_plan)
 
     res = open('./zad_output.txt', 'w')
-    res.write(k)
+    res.write(zwycieski_plan)
     res.close()
