@@ -103,7 +103,7 @@ def koniec(st):
 def znajdz_ruchy(st):
     # heurystyka
     def heura(st):
-        return len(st.kroki) + max([odleglosci[x][y] for x, y in st.komandosi])
+        return len(st.kroki) + max(odleglosci[x][y] for x, y in st.komandosi)
 
     q = []
     hq.heappush(q, (heura(st), [st]))
