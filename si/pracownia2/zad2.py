@@ -143,14 +143,8 @@ def sokoban_bfs(st):
 def sokoban_ast(st):
 
     def heura(st):
-        x, y = st.magazynier[0], st.magazynier[1]
-        # bierzemy odległość danej skrzynki od najbliższego celu
-        skrz = []
-        for s in st.skrzynki:
-            odl = min(abs(s[0] - c[0]) + abs(s[1] - c[1]) for c in cele)
-            skrz.append((s, odl))
-        # liczba kroków + magazynier->skrzynka + skrzynka->cel
-        return len(st.kroki) + min(abs(x - sx) + abs(y - sy) + so for (sx, sy), so in skrz)
+        # liczba kroków + skrzynka->cel
+        return len(st.kroki) + min(abs(s[0] - c[0]) + abs(s[1] - c[1]) for c in cele for s in st.skrzynki)
 
     q = []
     hq.heappush(q, (heura(st), [st]))
