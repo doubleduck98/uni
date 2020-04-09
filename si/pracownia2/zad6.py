@@ -104,7 +104,7 @@ def znajdz_ruchy(st):
     # heurystyka
     def heura(st):
         # można dodawać współczynniki przed len i sum
-        return len(st.kroki) + sum([odleglosci[x][y] for x, y in st.komandosi])
+        return len(st.kroki) + sum(odleglosci[x][y] for x, y in st.komandosi)
 
     q = []
     hq.heappush(q, (heura(st), [st]))
