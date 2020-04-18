@@ -4,7 +4,7 @@ namespace zadanie1._4._1
 {
     internal class Program
     {
-        /* Wyniki:
+        /* Wyniki na mojej maszynie:
          * konkretny typ -> 00:00:00.0049969
          * dynamiczny typ -> 00:00:00.1818965
          */

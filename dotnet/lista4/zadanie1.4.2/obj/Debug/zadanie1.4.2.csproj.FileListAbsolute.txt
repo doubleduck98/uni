@@ -3,3 +3,10 @@ X:\uni\dotnet\lista4\zadanie1.4.2\bin\Debug\zadanie1._4._2.pdb
 X:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1.4.2.csprojAssemblyReference.cache
 X:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1._4._2.exe
 X:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1._4._2.pdb
+D:\uni\dotnet\lista4\zadanie1.4.2\bin\Debug\zadanie1._4._2.exe
+D:\uni\dotnet\lista4\zadanie1.4.2\bin\Debug\zadanie1._4._2.pdb
+D:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1.4.2.csprojAssemblyReference.cache
+D:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+D:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1.4.2.csproj.ResolveComReference.cache
+D:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1._4._2.exe
+D:\uni\dotnet\lista4\zadanie1.4.2\obj\Debug\zadanie1._4._2.pdb
