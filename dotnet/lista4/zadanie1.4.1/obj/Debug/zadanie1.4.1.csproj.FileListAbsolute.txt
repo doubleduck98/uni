@@ -9,3 +9,4 @@ D:\uni\dotnet\lista4\zadanie1.4.1\obj\Debug\zadanie1.4.1.csprojAssemblyReference
 D:\uni\dotnet\lista4\zadanie1.4.1\obj\Debug\zadanie1._4._1.exe
 D:\uni\dotnet\lista4\zadanie1.4.1\obj\Debug\zadanie1._4._1.pdb
 D:\uni\dotnet\lista4\zadanie1.4.1\obj\Debug\zadanie1.4.1.csproj.CoreCompileInputs.cache
+X:\uni\dotnet\lista4\zadanie1.4.1\obj\Debug\zadanie1.4.1.csproj.CoreCompileInputs.cache
