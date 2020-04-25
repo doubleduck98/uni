@@ -47,9 +47,9 @@ namespace zadanie2._1._6
             this.backgroundWorker1.DoWork +=
                 new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.ProgressChanged +=
-                new ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+                new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted +=
-                new RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+                new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // workerBar
             // 
