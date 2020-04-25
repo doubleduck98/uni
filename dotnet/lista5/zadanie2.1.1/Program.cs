@@ -1,9 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace zadanie2._1._1
 {
     static class Program
     {
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();

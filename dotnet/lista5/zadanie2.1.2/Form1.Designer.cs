@@ -95,7 +95,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(372, 124);
+            this.button2.Location = new System.Drawing.Point(372, 123);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 29);
             this.button2.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(261, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 34);
+            this.label1.Size = new System.Drawing.Size(206, 33);
             this.label1.TabIndex = 6;
             this.label1.Text = "Tree  View";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,9 +143,9 @@
             // label2
             // 
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(261, 229);
+            this.label2.Location = new System.Drawing.Point(261, 228);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 31);
+            this.label2.Size = new System.Drawing.Size(206, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "Progress Bar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 443);
+            this.ClientSize = new System.Drawing.Size(751, 613);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
