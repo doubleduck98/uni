@@ -33,6 +33,7 @@
             this.startButton = new System.Windows.Forms.Button();
             this.asyncListBox = new System.Windows.Forms.ListBox();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // asyncStartButton
@@ -73,11 +74,22 @@
             this.listBox.Size = new System.Drawing.Size(178, 259);
             this.listBox.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(362, 52);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Po naciśnięciu przycisku Async możemy zaraz potem kliknąć przycisk Sync. W odwrot" +
+                               "nej sytuacji, musimy poczekać, aż synchroniczne pobieranie się zakończy.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 320);
+            this.ClientSize = new System.Drawing.Size(386, 385);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.asyncListBox);
             this.Controls.Add(this.startButton);
@@ -94,5 +106,6 @@
         private System.Windows.Forms.Button asyncStartButton;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.ListBox asyncListBox;
+        private System.Windows.Forms.Label label1;
     }
 }
