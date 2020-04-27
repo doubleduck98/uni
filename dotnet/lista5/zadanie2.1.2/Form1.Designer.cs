@@ -51,6 +51,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // treeView1
@@ -85,7 +89,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(372, 87);
+            this.button1.Location = new System.Drawing.Point(372, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 31);
             this.button1.TabIndex = 1;
@@ -105,7 +109,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 263);
+            this.progressBar1.Location = new System.Drawing.Point(13, 232);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(726, 68);
             this.progressBar1.TabIndex = 3;
@@ -113,7 +117,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(302, 337);
+            this.button3.Location = new System.Drawing.Point(302, 306);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 63);
             this.button3.TabIndex = 4;
@@ -123,7 +127,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(372, 337);
+            this.button4.Location = new System.Drawing.Point(372, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(64, 63);
             this.button4.TabIndex = 5;
@@ -143,18 +147,62 @@
             // label2
             // 
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(261, 228);
+            this.label2.Location = new System.Drawing.Point(261, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(206, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "Progress Bar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(261, 372);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 31);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "List Box";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Items.AddRange(new object[] {"coś", "coś więcej"});
+            this.listBox1.Location = new System.Drawing.Point(159, 406);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(207, 154);
+            this.listBox1.TabIndex = 9;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(372, 445);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(141, 30);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Dodaj element";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(372, 481);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(141, 30);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Usuń element";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 613);
+            this.ClientSize = new System.Drawing.Size(751, 573);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
@@ -163,6 +211,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.treeView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -178,5 +227,9 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }

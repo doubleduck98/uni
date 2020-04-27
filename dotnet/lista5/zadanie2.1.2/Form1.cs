@@ -51,9 +51,14 @@ namespace zadanie2._1._2
             progressBar1.Value = next;
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            listBox1.Items.Add("nowe coś");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Remove(listBox1.SelectedItem);
         }
     }
 }
