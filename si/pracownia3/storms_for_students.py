@@ -4,14 +4,14 @@ def B(i, j):
 
 def suma_wierszy(col_len):
     for i, r in enumerate(raws):
-        rs = [B(i, j) for j in range(col_len)]
-        writeln('sum([' + ', '.join(rs) + '], #=, ' + str(r) + '), ')
+        row = [B(i, j) for j in range(col_len)]
+        writeln(f"    sum([{', '.join(row)}], #=, {r}), ")
 
 
 def suma_kolumn(row_len):
-    for j, c in enumerate(cols):
-        cs = [B(i, j) for i in range(row_len)]
-        writeln('sum([' + ', '.join(cs) + '], #=, ' + str(c) + '), ')
+    for j, l in enumerate(cols):
+        col = [B(i, j) for i in range(row_len)]
+        writeln(f"    sum([{', '.join(col)}], #=, {l}), ")
 
 
 def wiersz_trojka(row_len, col_len):
