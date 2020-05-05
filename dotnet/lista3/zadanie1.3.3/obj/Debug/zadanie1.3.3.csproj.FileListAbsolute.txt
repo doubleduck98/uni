@@ -1,5 +1,0 @@
-D:\uni\dotnet\lista3\zadanie1.3.3\bin\Debug\zadanie1._3._3.exe
-D:\uni\dotnet\lista3\zadanie1.3.3\bin\Debug\zadanie1._3._3.pdb
-D:\uni\dotnet\lista3\zadanie1.3.3\obj\Debug\zadanie1.3.3.csprojAssemblyReference.cache
-D:\uni\dotnet\lista3\zadanie1.3.3\obj\Debug\zadanie1._3._3.exe
-D:\uni\dotnet\lista3\zadanie1.3.3\obj\Debug\zadanie1._3._3.pdb
