@@ -1,0 +1,9 @@
+X:\uni\dotnet\lista5\zadanie2.1.6\bin\Debug\zadanie2._1._6.exe.config
+X:\uni\dotnet\lista5\zadanie2.1.6\bin\Debug\zadanie2._1._6.exe
+X:\uni\dotnet\lista5\zadanie2.1.6\bin\Debug\zadanie2._1._6.pdb
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2.1.6.csprojAssemblyReference.cache
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2._1._6.Properties.Resources.resources
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2.1.6.csproj.GenerateResource.cache
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2._1._6.exe
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2._1._6.pdb
+X:\uni\dotnet\lista5\zadanie2.1.6\obj\Debug\zadanie2._1._6.Form1.resources
