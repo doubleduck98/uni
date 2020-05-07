@@ -7,8 +7,6 @@
 *.suo
 *.user
 .vs/
-[Bb]in/
-[Oo]bj/
 _UpgradeReport_Files/
 [Pp]ackages/
 
