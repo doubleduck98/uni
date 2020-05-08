@@ -7,3 +7,4 @@ X:\uni\dotnet\lista5\zadanie2.1.1\bin\Debug\zadanie2._1._1.exe
 X:\uni\dotnet\lista5\zadanie2.1.1\bin\Debug\zadanie2._1._1.pdb
 X:\uni\dotnet\lista5\zadanie2.1.1\obj\Debug\zadanie2._1._1.exe
 X:\uni\dotnet\lista5\zadanie2.1.1\obj\Debug\zadanie2._1._1.pdb
+X:\uni\dotnet\lista5\zadanie2.1.1\obj\Debug\zadanie2.1.1.csproj.CoreCompileInputs.cache
