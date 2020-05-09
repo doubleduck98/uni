@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:zadanie2._2._1"
         mc:Ignorable="d"
-        Title="Wybór uczelni" Height="350" Width="525">
+        Title="Wybór uczelni" Height="350" Width="525" MinHeight="350" MinWidth="525">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="9*" />
