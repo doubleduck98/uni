@@ -20,8 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d366b1ac-b765-4f77-83c0-5b98b151b1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.1/Complex.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.2/Set.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/bin/Debug/plik.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/bin/Debug/plik.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/bin/Debug/zadanie2._3._3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/bin/Debug/zadanie2._3._3.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3encrypt.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3encrypt.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2.3.3encrypt.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2._3._3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2._3._3.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2._3._3encrypt.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/obj/Debug/zadanie2._3._3encrypt.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.3/zadanie2.3.3.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/bin/Debug/zadanie2._3._4.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/bin/Debug/zadanie2._3._4.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/obj/Debug/zadanie2.3.4.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/obj/Debug/zadanie2.3.4.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/obj/Debug/zadanie2.3.4.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/obj/Debug/zadanie2._3._4.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/obj/Debug/zadanie2._3._4.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.3.4/zadanie2.3.4.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lista7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lista7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista7.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lista7.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadanie2.3.2/bin/Debug/zadanie2._3._2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.2/bin/Debug/zadanie2._3._2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadanie2.3.2/bin/Debug/zadanie2._3._2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.2/bin/Debug/zadanie2._3._2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2.3.2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2.3.2.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2._3._2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2._3._2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2._3._2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.2/obj/Debug/zadanie2._3._2.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +64,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.3.4/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.2/Set.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.3.3/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.3.3/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../lista6/zadanie2.2.2/obj/Debug/MainWindow.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../lista6/zadanie2.2.2/obj/Debug/MainWindow.g.i.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../lista6/zadanie2.2.2/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///MainWindow.g.i.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///MainWindow.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.1/Complex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.2/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -50,6 +82,12 @@
         <option value="$PROJECT_DIR$/zadanie2.3.1/Program.cs" />
         <option value="$PROJECT_DIR$/zadanie2.3.2/Set.cs" />
         <option value="$PROJECT_DIR$/zadanie2.3.2/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.3encrypt/Properties/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.3encrypt/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.3decrypt/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.3/Properties/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.3/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.3.4/Program.cs" />
       </list>
     </option>
   </component>
@@ -62,12 +100,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected=".NET Project.zadanie2.3.2">
+  <component name="RunManager" selected=".NET Project.zadanie2.3.4">
     <configuration name="zadanie2.3.1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -104,8 +143,52 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="zadanie2.3.3" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/zadanie2.3.3encrypt/bin/Debug/zadanie2._3._3.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zadanie2.3.3encrypt/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/zadanie2.3.3/zadanie2.3.3.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="zadanie2.3.4" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/zadanie2.3.4/zadanie2.3.4.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.zadanie2.3.1" />
+      <item itemvalue=".NET Project.zadanie2.3.2" />
+      <item itemvalue=".NET Project.zadanie2.3.3" />
+      <item itemvalue=".NET Project.zadanie2.3.4" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Project.zadanie2.3.4" />
+        <item itemvalue=".NET Project.zadanie2.3.3" />
         <item itemvalue=".NET Project.zadanie2.3.2" />
       </list>
     </recent_temporary>
@@ -121,10 +204,11 @@
       <option name="presentableId" value="Default" />
       <updated>1589635085071</updated>
       <workItem from="1589635090313" duration="9224000" />
+      <workItem from="1589715496811" duration="15518000" />
     </task>
     <servers />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -136,31 +220,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1589645144784">
+    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589724738582">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1589645144784" />
-    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1589645144784">
+    <state x="1374" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1589724738582" />
+    <state x="1604" y="148" key="#zadanie2.3.3decrypt" timestamp="1589725111136">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1589645144784" />
-    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1589645144784">
+    <state x="1604" y="148" key="#zadanie2.3.3decrypt/0.0.2560.1040@0.0.2560.1040" timestamp="1589725111136" />
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1589733215056">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1589645144784" />
-    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1589645144784">
+    <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1589733215056" />
+    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1589733215056">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1589645144784" />
-    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1589643240474">
+    <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1589733215056" />
+    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1589733215056">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.2560.1040@0.0.2560.1040" timestamp="1589643240474" />
+    <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1589733215056" />
+    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1589733215056">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1589733215056" />
+    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1589727790939">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.2560.1040@0.0.2560.1040" timestamp="1589727790939" />
     <state x="1754" y="225" key="RiderGenerateDialog" timestamp="1589644725841">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -169,5 +263,9 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1698" y="234" key="RollbackChangesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1589635200302" />
+    <state x="1568" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589726593038">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1568" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1589726593038" />
   </component>
 </project>

@@ -1,0 +1,6 @@
+X:\uni\dotnet\lista7\zadanie2.3.3\bin\Debug\zadanie2._3._3.exe
+X:\uni\dotnet\lista7\zadanie2.3.3\bin\Debug\zadanie2._3._3.pdb
+X:\uni\dotnet\lista7\zadanie2.3.3\obj\Debug\zadanie2.3.3.csprojAssemblyReference.cache
+X:\uni\dotnet\lista7\zadanie2.3.3\obj\Debug\zadanie2.3.3.csproj.CoreCompileInputs.cache
+X:\uni\dotnet\lista7\zadanie2.3.3\obj\Debug\zadanie2._3._3.exe
+X:\uni\dotnet\lista7\zadanie2.3.3\obj\Debug\zadanie2._3._3.pdb

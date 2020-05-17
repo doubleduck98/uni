@@ -1,0 +1,6 @@
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\bin\Debug\zadanie2._3._3encrypt.exe
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\bin\Debug\zadanie2._3._3encrypt.pdb
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\obj\Debug\zadanie2.3.3encrypt.csprojAssemblyReference.cache
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\obj\Debug\zadanie2.3.3encrypt.csproj.CoreCompileInputs.cache
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\obj\Debug\zadanie2._3._3encrypt.exe
+X:\uni\dotnet\lista7\zadanie2.3.3encrypt\obj\Debug\zadanie2._3._3encrypt.pdb
