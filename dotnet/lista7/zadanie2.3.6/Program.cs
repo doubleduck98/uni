@@ -47,19 +47,22 @@ namespace zadanie2._3._6
             {
                 var server = new TcpListener(IPAddress.Parse("127.0.0.1"), 7171);
                 server.Start();
+                
                 // czekam na tylko jedno połączenie
                 var client = server.AcceptTcpClient();
                 Console.WriteLine("Nadchodzące połączenie.");
-                
+
                 var bf = new BinaryFormatter();
                 var o = (Obiekt) bf.Deserialize(client.GetStream());
-                Console.WriteLine("Otrzymałem wiadomość: " +o);
-                
+                Console.WriteLine("Otrzymałem wiadomość: " + o);
+
                 var fileOut = new FileStream(Path.Combine(Environment.CurrentDirectory, "plik.dat"),
-                    FileMode.OpenOrCreate,
-                    FileAccess.Write);
+                    FileMode.OpenOrCreate, FileAccess.Write);
                 bf.Serialize(fileOut, o);
                 Console.WriteLine("Zapisano plik.");
+
+                client.Close();
+                server.Stop();
             }
             catch (Exception e)
             {
@@ -75,6 +78,7 @@ namespace zadanie2._3._6
             var bf = new BinaryFormatter();
             bf.Serialize(stream, o);
             stream.Close();
+            client.Close();
         }
 
         public static void Main(string[] args)
