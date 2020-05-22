@@ -1,0 +1,7 @@
+X:\uni\dotnet\lista8\zadanie2.5.3\bin\Debug\zadanie2._5._3.exe
+X:\uni\dotnet\lista8\zadanie2.5.3\bin\Debug\zadanie2._5._3.pdb
+X:\uni\dotnet\lista8\zadanie2.5.3\obj\Debug\zadanie2.5.3.csprojAssemblyReference.cache
+X:\uni\dotnet\lista8\zadanie2.5.3\obj\Debug\zadanie2.5.3.csproj.CoreCompileInputs.cache
+X:\uni\dotnet\lista8\zadanie2.5.3\obj\Debug\zadanie2._5._3.exe
+X:\uni\dotnet\lista8\zadanie2.5.3\obj\Debug\zadanie2._5._3.pdb
+X:\uni\dotnet\lista8\zadanie2.5.3\bin\Debug\zadanie2._5._3.exe.config

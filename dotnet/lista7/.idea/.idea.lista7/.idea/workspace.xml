@@ -19,46 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d366b1ac-b765-4f77-83c0-5b98b151b1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/bin/Debug/zadanie2._3._7.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/bin/Debug/zadanie2._3._7.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/obj/Debug/zadanie2.3.7.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/obj/Debug/zadanie2.3.7.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/obj/Debug/zadanie2.3.7.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/obj/Debug/zadanie2._3._7.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/obj/Debug/zadanie2._3._7.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.7/zadanie2.3.7.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/bin/Debug/zadanie2._3._8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/bin/Debug/zadanie2._3._8.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/obj/Debug/zadanie2.3.8.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/obj/Debug/zadanie2.3.8.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/obj/Debug/zadanie2.3.8.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/obj/Debug/zadanie2._3._8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/obj/Debug/zadanie2._3._8.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.8/zadanie2.3.8.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/bin/Debug/zadanie2._3._9.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/bin/Debug/zadanie2._3._9.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/obj/Debug/zadanie2.3.9.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/obj/Debug/zadanie2.3.9.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/obj/Debug/zadanie2.3.9.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/obj/Debug/zadanie2._3._9.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/obj/Debug/zadanie2._3._9.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.3.9/zadanie2.3.9.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lista7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lista7/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista7.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lista7.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/bin/Debug/zadanie2._3._6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/bin/Debug/zadanie2._3._6.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/bin/Debug/zadanie2._3._6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/bin/Debug/zadanie2._3._6.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2.3.6.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2.3.6.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2._3._6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2._3._6.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2._3._6.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/zadanie2.3.6/obj/Debug/zadanie2._3._6.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="d366b1ac-b765-4f77-83c0-5b98b151b1db" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/zadanie2.3.3/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../lista6/zadanie2.2.2/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.1/Complex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.3.7/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.6/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.3.7/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
