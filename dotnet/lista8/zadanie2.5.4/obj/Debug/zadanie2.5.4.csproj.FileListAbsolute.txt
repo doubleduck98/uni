@@ -1,0 +1,12 @@
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\zadanie2._5._4.exe.config
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\zadanie2._5._4.exe
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\zadanie2._5._4.pdb
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\EntityFramework.dll
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\EntityFramework.SqlServer.dll
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\EntityFramework.xml
+X:\uni\dotnet\lista8\zadanie2.5.4\bin\Debug\EntityFramework.SqlServer.xml
+X:\uni\dotnet\lista8\zadanie2.5.4\obj\Debug\zadanie2.5.4.csprojAssemblyReference.cache
+X:\uni\dotnet\lista8\zadanie2.5.4\obj\Debug\zadanie2.5.4.csproj.CoreCompileInputs.cache
+X:\uni\dotnet\lista8\zadanie2.5.4\obj\Debug\zadanie2.5.4.csproj.CopyComplete
+X:\uni\dotnet\lista8\zadanie2.5.4\obj\Debug\zadanie2._5._4.exe
+X:\uni\dotnet\lista8\zadanie2.5.4\obj\Debug\zadanie2._5._4.pdb

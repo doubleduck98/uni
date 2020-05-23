@@ -16,6 +16,7 @@ namespace zadanie2._5._3
                 };
                 db.Miejscowosc.InsertOnSubmit(nMiejscowosc);
                 db.SubmitChanges();
+
                 var nStudent = new Student()
                 {
                     Imię = "Szymon",
@@ -26,10 +27,11 @@ namespace zadanie2._5._3
                 db.Student.InsertOnSubmit(nStudent);
                 db.SubmitChanges();
 
-                foreach (var stud in (from s in db.Student
-                                      join m in db.Miejscowosc
-                                      on s.Miejscowosc equals m.id
-                                      select new {s.Imię, s.Nazwisko, s.DataUrodzenia, m.Nazwa}))
+                foreach (var stud in
+                    from s in db.Student
+                    join m in db.Miejscowosc
+                        on s.Miejscowosc equals m.id
+                    select new {s.Imię, s.Nazwisko, s.DataUrodzenia, m.Nazwa})
                 {
                     Console.WriteLine("{0} {1} {2} {3}", stud.Imię, stud.Nazwisko, stud.DataUrodzenia, stud.Nazwa);
                 }
@@ -41,18 +43,19 @@ namespace zadanie2._5._3
                         miejsc.Nazwa = "Wrocław";
                     }
                 }
+
                 db.SubmitChanges();
 
                 foreach (var stud in db.Student)
                 {
-                    if(stud.Nazwisko == "Zienkiewicz")
+                    if (stud.Nazwisko == "Zienkiewicz")
                     {
                         db.Student.DeleteOnSubmit(stud);
                     }
                 }
+
                 db.SubmitChanges();
             }
-
         }
     }
 }
