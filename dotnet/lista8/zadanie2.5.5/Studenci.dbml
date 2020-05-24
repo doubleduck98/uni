@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Example" Class="StudenciDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=GLADOS\SQLEXPRESS;Initial Catalog=Example;Integrated Security=True;MultipleActiveResultSets=False;Connect Timeout=30;TrustServerCertificate=False;Application Name=&quot;Microsoft SQL Server Data Tools, SQL Server Object Explorer&quot;" SettingsObjectName="zadanie2._5._5.Properties.Settings" SettingsPropertyName="ExampleConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Student" Member="Student">
+    <Type Name="Student">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Imię" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DataUrodzenia" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Miejscowosc" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Miejscowosc_Student" Member="Miejscowosc1" ThisKey="Miejscowosc" OtherKey="id" Type="Miejscowosc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Miejscowosc" Member="Miejscowosc">
+    <Type Name="Miejscowosc">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Miejscowosc_Student" Member="Student" ThisKey="id" OtherKey="Miejscowosc" Type="Student" />
+    </Type>
+  </Table>
+</Database>
