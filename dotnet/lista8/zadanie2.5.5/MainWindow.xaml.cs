@@ -70,7 +70,6 @@ namespace zadanie2._5._5
                     };
                     db.Student.InsertOnSubmit(nstud);
                     db.SubmitChanges();
-                    db.SubmitChanges();
 
                     _studenci.Add(nstud);
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Studenci"));
