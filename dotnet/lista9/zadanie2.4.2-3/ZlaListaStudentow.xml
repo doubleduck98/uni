@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ListaStudentow xmlns="MojaLista" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="MojaLista ListaStudentow.xsd">
+    <Student Imie="Szymon" Nazwisko="1998-11-16" DataUrodzenia="Zienkiewicz" AdresEmail="szipi@gmail.com">
+        <Adres Ulica="Długa" NrDomu="21" Mieszkanie="2" Miasto="Wrocław" KodPocztowy="53-657"/>
+        <AdresTymczasowy Ulica="J.Matejki" NrDomu="2" Mieszkanie="5" Miasto="Tarnobrzeg" KodPocztowy="39-400"/>
+        <ListaZajec>
+            <Zajecia Nazwa="Algorytmy i struktury danych" OcenaZCwiczen="4" OcenaZWykladu="3"/>
+            <Zajecia Nazwa="Programowanie pod Windows" OcenaZCwiczen="5"/>
+        </ListaZajec>
+    </Student>
+    <Student Imie="Adam" Nazwisko="Abacki" DataUrodzenia="1996-05-21" AdresEmail="aaxd@googlemail.com">
+        <Adres Ulica="Krótka" NrDomu="2" Miasto="Wrocław" KodPocztowy="55-010"/>
+        <AdresTymczasowy Ulica="Prądnicka" NrDomu="75" Mieszkanie="Piąte" Miasto="Kraków" KodPocztowy="31-215"/>
+        <ListaZajec>
+            <Zajecia Nazwa="Algorytmy i struktury danych" OcenaZCwiczen="5" OcenaZWykladu="5"/>
+            <Zajecia Nazwa="Programowanie pod Windows" OcenaZCwiczen="3" OcenaZWykladu="4"/>
+        </ListaZajec>
+    </Student>
+</ListaStudentow>
