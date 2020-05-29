@@ -20,31 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="622265ce-d55c-4e34-9213-84401ed516d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/ZlaListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/bin/Debug/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/bin/Debug/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/bin/Debug/ZlaListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/bin/Debug/zadanie2._4._2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/bin/Debug/zadanie2._4._2.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2.4.2-3.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2.4.2.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2.4.2.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2.4.2.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2._4._2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/zadanie2._4._2.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/ListaStudentow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/bin/Debug/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/bin/Debug/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/obj/Debug/zadanie2.4.4.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.4/zadanie2.4.4.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/ListaStudentow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/ListaStudentow.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/ListaStudentow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/ListaStudentow.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/zadanie2._4._7.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/zadanie2._4._7.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2._4._7.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2._4._7.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/zadanie2.4.7.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lista9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lista9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista9.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lista9.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +56,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/zadanie2.4.4/ListaStudentow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.4.2-3/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.4.7/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.4.4/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -77,6 +71,8 @@
         <option value="$PROJECT_DIR$/zadanie2.4.2/Program.cs" />
         <option value="$PROJECT_DIR$/zadanie2.4.2-3/Program.cs" />
         <option value="$PROJECT_DIR$/zadanie2.4.4/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.4.5/Program.cs" />
+        <option value="$PROJECT_DIR$/zadanie2.4.7/Program.cs" />
       </list>
     </option>
   </component>
@@ -95,7 +91,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager" selected=".NET Project.zadanie2.4.4">
+  <component name="RunManager" selected=".NET Project.zadanie2.4.7">
     <configuration name="zadanie2.4.2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -132,8 +128,27 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="zadanie2.4.7" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/zadanie2._4._7.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zadanie2.4.7/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/zadanie2.4.7/zadanie2.4.7.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Project.zadanie2.4.7" />
         <item itemvalue=".NET Project.zadanie2.4.4" />
       </list>
     </recent_temporary>
@@ -173,26 +188,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1234" height="281" key="GridCell.Tab.0.bottom" timestamp="1590759399483">
+    <state width="1234" height="280" key="GridCell.Tab.0.bottom" timestamp="1590770847597">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590759399483" />
-    <state width="1234" height="281" key="GridCell.Tab.0.center" timestamp="1590759399483">
+    <state width="1234" height="280" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
+    <state width="1234" height="280" key="GridCell.Tab.0.center" timestamp="1590770847597">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590759399483" />
-    <state width="1234" height="281" key="GridCell.Tab.0.left" timestamp="1590759399483">
+    <state width="1234" height="280" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
+    <state width="1234" height="280" key="GridCell.Tab.0.left" timestamp="1590770847596">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590759399483" />
-    <state width="1234" height="281" key="GridCell.Tab.0.right" timestamp="1590759399483">
+    <state width="1234" height="280" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847596" />
+    <state width="1234" height="280" key="GridCell.Tab.0.right" timestamp="1590770847597">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590759399483" />
-    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1590759222059">
+    <state width="1234" height="280" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
+    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1590767576293">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.2560.1040@0.0.2560.1040" timestamp="1590759222059" />
+    <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size/0.0.2560.1040@0.0.2560.1040" timestamp="1590767576293" />
     <state x="1591" y="216" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1590757430018">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>

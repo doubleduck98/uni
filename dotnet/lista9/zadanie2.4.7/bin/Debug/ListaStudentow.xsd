@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="MojaLista" targetNamespace="MojaLista" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListaStudentow" type="ListaStudentowType"/>
+  <xs:complexType name="AdresType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="Ulica" use="required"/>
+        <xs:attribute type="xs:int" name="NrDomu" use="required"/>
+        <xs:attribute type="xs:int" name="Mieszkanie" use="optional"/>
+        <xs:attribute type="xs:string" name="Miasto" use="required"/>
+        <xs:attribute type="xs:string" name="KodPocztowy" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AdresTymczasowyType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="Ulica" use="required"/>
+        <xs:attribute type="xs:int" name="NrDomu" use="required"/>
+        <xs:attribute type="xs:int" name="Mieszkanie" use="optional"/>
+        <xs:attribute type="xs:string" name="Miasto" use="required"/>
+        <xs:attribute type="xs:string" name="KodPocztowy" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ZajeciaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="Nazwa" use="required"/>
+        <xs:attribute type="xs:int" name="OcenaZCwiczen" use="optional"/>
+        <xs:attribute type="xs:int" name="OcenaZWykladu" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ListaZajecType">
+    <xs:sequence>
+      <xs:element type="ZajeciaType" name="Zajecia" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StudentType">
+    <xs:sequence>
+      <xs:element type="AdresType" name="Adres"/>
+      <xs:element type="AdresTymczasowyType" name="AdresTymczasowy"/>
+      <xs:element type="ListaZajecType" name="ListaZajec"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Imie" use="required"/>
+    <xs:attribute type="xs:string" name="Nazwisko" use="required"/>
+    <xs:attribute type="xs:date" name="DataUrodzenia" use="required"/>
+    <xs:attribute type="xs:string" name="AdresEmail" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="ListaStudentowType">
+    <xs:sequence>
+      <xs:element type="StudentType" name="Student" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
