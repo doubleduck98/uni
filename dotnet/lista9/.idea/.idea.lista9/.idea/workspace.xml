@@ -19,25 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="622265ce-d55c-4e34-9213-84401ed516d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/ListaStudentow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/ListaStudentow.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/zadanie2._4._7.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/bin/Debug/zadanie2._4._7.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2.4.7.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2._4._7.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/obj/Debug/zadanie2._4._7.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie2.4.7/zadanie2.4.7.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.lista9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lista9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista9.sln" beforeDir="false" afterPath="$PROJECT_DIR$/lista9.sln" afterDir="false" />
-    </list>
+    <list default="true" id="622265ce-d55c-4e34-9213-84401ed516d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/zadanie2.4.2-3/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.4.7/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.4.2-3/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zadanie2.4.7/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/zadanie2.4.4/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -188,22 +171,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1234" height="280" key="GridCell.Tab.0.bottom" timestamp="1590770847597">
+    <state width="1234" height="280" key="GridCell.Tab.0.bottom" timestamp="1590941647506">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="280" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
-    <state width="1234" height="280" key="GridCell.Tab.0.center" timestamp="1590770847597">
+    <state width="1234" height="280" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590941647506" />
+    <state width="1234" height="280" key="GridCell.Tab.0.center" timestamp="1590941647506">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="280" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
-    <state width="1234" height="280" key="GridCell.Tab.0.left" timestamp="1590770847596">
+    <state width="1234" height="280" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590941647506" />
+    <state width="1234" height="280" key="GridCell.Tab.0.left" timestamp="1590941647506">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="280" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847596" />
-    <state width="1234" height="280" key="GridCell.Tab.0.right" timestamp="1590770847597">
+    <state width="1234" height="280" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590941647506" />
+    <state width="1234" height="280" key="GridCell.Tab.0.right" timestamp="1590941647506">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1234" height="280" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590770847597" />
+    <state width="1234" height="280" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590941647506" />
     <state x="1512" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1590767576293">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
