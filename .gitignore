@@ -25,3 +25,6 @@ target/
 
 #npm
 node_modules/
+
+#scala
+.metal/
