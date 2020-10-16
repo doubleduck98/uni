@@ -27,4 +27,4 @@ target/
 node_modules/
 
 #scala
-.metal/
+.metals/
