@@ -28,3 +28,4 @@ node_modules/
 
 #scala
 .metals/
+.scalafmt.conf
