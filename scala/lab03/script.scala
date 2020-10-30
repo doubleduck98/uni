@@ -39,8 +39,7 @@ object Utils {
   def repeated[A, B](f: Int => Int, n: Int) = {
     /*
     -in the example n seems to be a counter as well as an argument of the innermost function
-    -i couldn't come up with idea of how to make argument f anything but Int=>Int,
-    because i was getting type mismatches, so a quick how-to would be appreciated
+    -i couldn't come up with idea of how to make argument f anything but Int=>Int
      */
     require(n >= 0, "can't repeat function <0 many times")
     def rptd(i: Int, acc: Int): Int = {
@@ -74,19 +73,66 @@ object Utils {
 
 object main extends App {
   import Utils._
-  println(isSorted(List(1, 2, 3), (x, y) => x < y))
+  println("isSorted")
+  println(isSorted(List(1, 2, 3), _ < _))
+  println(isSorted(List(1), _ < _))
+  println(isSorted(List(), (x, y) => x < y))
+  println(isSorted(List(3, 1, 2), _ > _))
+  println("***")
+
+  println("isAscSorted")
   println(isAscSorted(List(1, 2, 3)))
-  println(foldLeft(List(1, 2, 3), 0)((x, y) => x + y))
+  println(isAscSorted(List(1)))
+  println(isAscSorted(List()))
+  println(isAscSorted(List(1, 3, 2)))
+  println("***")
+
+  println("isDescSorted")
+  println(isDescSorted(List(3, 2, 1)))
+  println(isDescSorted(List(1)))
+  println(isDescSorted(List()))
+  println(isDescSorted(List(3, 1, 2)))
+  println("***")
+
+  println("foldLeft")
+  println(foldLeft(List(1, 2, 3), 0)(_ + _))
+  println(foldLeft(List(1, 2, 3), 1)(_ * _))
+  println(
+    foldLeft(List("a", "b", "c"), "")((s1: String, s2: String) => s1.concat(s2))
+  )
+  println(foldLeft(List.empty, 0)((_: Int) + (_: Int)))
+  println("***")
+
+  println("sum")
   println(sum(List(1, 2, 3)))
+  println(sum(List()))
+  println(sum(List(1)))
+  println("***")
+
+  println("length")
   println(length(List(1, 2, 3, 4, 5, 6, 7)))
+  println(length(List('a', 'b', 'c')))
+  println(length(List()))
+  println("***")
+
+  println("compose")
   println(compose((x: Int) => x * x, (x: Int) => x + x)(2))
+  println(compose((x: Int) => x + x, (x: Int) => x * x)(2))
+  println(
+    compose((x: String) => x.toUpperCase(), (x: String) => x.concat(x))("a")
+  )
+  println("***")
+
+  println("curry/uncurry")
   def add(a: Int, b: Int) = a + b
   def f = (x: Int) => (y: Int) => x + y
   println(curry(add)(1)(1))
   println(uncurry(curry(add))(1, 1))
   println(uncurry(f)(1, 1))
   println(repeated((x: Int) => x * x, 2))
-  unSafe(new Exception("essa")){
+  println("***")
+
+  unSafe(new Exception("essa")) {
     throw new Exception("ups")
   }
 }
