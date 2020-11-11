@@ -61,17 +61,6 @@ void adc_init() {
   ADCSRA |= _BV(ADIE);
 }
 
-// inicjalizacja licznika 2
-void timer2_init() {
-  // preskaler 1024
-  TCCR2B = _BV(CS20) | _BV(CS21) | _BV(CS22);
-  // odmaskowanie przerwania przepełnienia licznika
-  TIMSK2 |= _BV(TOIE2);
-}
-
-// procedura obsługi przerwania przepełnienia licznika
-ISR(TIMER2_OVF_vect) {}
-
 void loop_w_noise() {
   while (1) {
     ADCSRA |= _BV(ADSC);
@@ -85,7 +74,6 @@ void loop_w_noise() {
 }
 
 void loop_wo_noise() {
-  timer2_init();
   set_sleep_mode(SLEEP_MODE_ADC);
   sei();
   while (1) {
