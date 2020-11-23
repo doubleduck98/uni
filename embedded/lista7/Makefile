@@ -1,4 +1,4 @@
-PRG            = zad1
+PRG            = zad2
 OBJ            = ${PRG}.o i2c.o
 PROGRAMMER     = arduino
 PORT           = /dev/ttyUSB0

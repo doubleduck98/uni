@@ -43,6 +43,25 @@ FILE uart_file;
 
 const uint8_t eeprom_addr = 0xa0;
 
+void eeprom_read_byte(uint8_t addr) {
+  i2cStart();
+  i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
+  i2cSend(addr);
+  i2cStart();
+  i2cSend(eeprom_addr | 0x1 | ((addr & 0x100) >> 7));
+  uint8_t data = i2cReadNoAck();
+  printf("data: %x\n", data);
+  i2cStop();
+}
+
+void eeprom_write_byte(uint8_t addr, uint8_t val) {
+  i2cStart();
+  i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
+  i2cSend(addr);
+  i2cSend(val);
+  i2cStop();
+}
+
 int main() {
   // zainicjalizuj UART
   uart_init();
@@ -52,81 +71,30 @@ int main() {
   // zainicjalizuj I2C
   i2cInit();
   PORTC |= _BV(4) | _BV(5);
+
   // program testowy
-  uint8_t addr = 0;
-#define i2cCheck(code, msg)                               \
-  if ((TWSR & 0xf8) != (code)) {                          \
-    printf(msg " failed, status: %.2x\r\n", TWSR & 0xf8); \
-    i2cReset();                                           \
-    continue;                                             \
-  }
   while (1) {
-    char cmdbuf[64];
-    scanf("%s", cmdbuf);
-    printf("%s\r\n", cmdbuf);
-    if (strcmp(cmdbuf, "read") == 0) {
-      printf("r, %s\r\n", cmdbuf);
-      uint16_t addr;
-      scanf("%x", &addr);
-      printf("in, %x\r\n", addr);
-
-      i2cStart();
-      i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
-      i2cSend(addr);
-      i2cStart();
-      i2cSend(eeprom_addr | 0x1 | ((addr & 0x100) >> 7));
-      uint8_t data = i2cReadNoAck();
-      printf("data: %x\r\n", data);
-      i2cStop();
-    } else if (strcmp(cmdbuf, "write") == 0) {
-      printf("w, %s\r\n", cmdbuf);
-      uint16_t addr, val;
-      scanf("%x %x", &addr, &val);
-      printf("in, %x %x\r\n", addr, val);
-
-      i2cStart();
-      i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
-      i2cSend(addr);
-      i2cSend(val);
-      i2cStop();
-    } else {
-      printf("nierozpoznana komenda: %s\r\n", cmdbuf);
+    char buf[64];
+    fgets(buf, 64, stdin);
+    printf("%s", buf);
+    uint8_t *cmd = strtok(buf, " \n");
+    // instrukcja read
+    if (strncmp(cmd, "read", 4) == 0) {
+      cmd = strtok(NULL, " \n");
+      uint8_t addr = (uint8_t)strtol(cmd, NULL, 16);
+      eeprom_read_byte(addr);
     }
-
-    // i2cStart();
-    // i2cSend(eeprom_addr | ((10 & 0x100) >> 7));
-    // i2cSend(10);
-    // i2cStart();
-    // i2cSend(eeprom_addr | 0x1 | ((10 & 0x100) >> 7));
-    // uint8_t data = i2cReadNoAck();
-    // printf("data: %x\r\n", data);
-    // i2cStop();
-
-    // i2cStart();
-    // i2cSend(eeprom_addr | ((10 & 0x100) >> 7));
-    // i2cSend(10);
-    // i2cSend(10);
-    // i2cStop();
-    // _delay_ms(500);
-
-    // i2cStart();
-    // i2cCheck(0x08, "I2C start")
-    // i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
-    // i2cCheck(0x18, "I2C EEPROM write request")
-    // i2cSend(addr & 0xff);
-    // i2cCheck(0x28, "I2C EEPROM set address")
-    // i2cSend(0x00);
-    // i2cStart();
-    // i2cCheck(0x10, "I2C second start")
-    // i2cSend(eeprom_addr |  0x1 | ((addr & 0x100) >> 7));
-    // i2cCheck(0x40, "I2C EEPROM read request")
-    // uint8_t data = i2cReadNoAck();
-    // i2cCheck(0x58, "I2C EEPROM read")
-    // i2cStop();
-    // i2cCheck(0xf8, "I2C stop")
-    // printf("%.3x: %x\r\n", addr, data);
-    // addr++;
-    // addr &= 0x1ff;
-    // _delay_ms(500);
+    // instrukcja write
+    else if (strncmp(cmd, "write", 5) == 0) {
+      cmd = strtok(NULL, " \n");
+      uint8_t addr = (uint8_t)strtol(cmd, NULL, 16);
+      cmd = strtok(NULL, " \n");
+      uint8_t val = (uint8_t)strtol(cmd, NULL, 16);
+      eeprom_write_byte(addr, val);
+    }
+    // cos zle poszlo
+    else {
+      printf("nierozpoznana komenda\n");
+    }
   }
 }
