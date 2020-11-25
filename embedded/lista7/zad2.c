@@ -140,9 +140,7 @@ uint8_t eeprom_write_bytes(char *i8hex) {
     i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
     i2cSend(addr);
     // liczba bajtów do konca strony pamięci
-    uint8_t page = (addr & ~(I2C_ROW_SIZE - 1))
-                       ? ((addr + I2C_ROW_SIZE) & ~(I2C_ROW_SIZE - 1))
-                       : addr;
+    uint8_t page = (I2C_ROW_SIZE - (addr & (I2C_ROW_SIZE - 1)));
     addr += page;
     for (int i = 0; i < n; ++i) {
       // jak zostało 0B na stronie to skaczemy do kolejnej
@@ -151,9 +149,7 @@ uint8_t eeprom_write_bytes(char *i8hex) {
         i2cStart();
         i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
         i2cSend(addr);
-        uint8_t page = (addr & ~(I2C_ROW_SIZE - 1))
-                           ? ((addr + I2C_ROW_SIZE) & ~(I2C_ROW_SIZE - 1))
-                           : addr;
+        uint8_t page = (I2C_ROW_SIZE - (addr & (I2C_ROW_SIZE - 1)));
         addr += page;
         if (page > n) page = n;
       }
