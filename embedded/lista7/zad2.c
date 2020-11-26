@@ -149,9 +149,8 @@ uint8_t eeprom_write_bytes(char *i8hex) {
         i2cStart();
         i2cSend(eeprom_addr | ((addr & 0x100) >> 7));
         i2cSend(addr);
-        uint8_t page = (I2C_ROW_SIZE - (addr & (I2C_ROW_SIZE - 1)));
-        addr += page;
-        if (page > n) page = n;
+        page = I2C_ROW_SIZE;
+        addr += I2C_ROW_SIZE;
       }
       // wysyłamy dane
       strncpy(buf, i8hex + 9 + (i * 2), 2);
