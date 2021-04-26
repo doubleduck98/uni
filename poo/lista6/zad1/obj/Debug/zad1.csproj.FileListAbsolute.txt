@@ -1,0 +1,6 @@
+X:\uni\poo\lista6\zad1\bin\Debug\zad1.exe
+X:\uni\poo\lista6\zad1\bin\Debug\zad1.pdb
+X:\uni\poo\lista6\zad1\obj\Debug\zad1.csprojAssemblyReference.cache
+X:\uni\poo\lista6\zad1\obj\Debug\zad1.csproj.CoreCompileInputs.cache
+X:\uni\poo\lista6\zad1\obj\Debug\zad1.exe
+X:\uni\poo\lista6\zad1\obj\Debug\zad1.pdb
