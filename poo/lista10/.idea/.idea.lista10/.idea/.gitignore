@@ -1,0 +1,11 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.lista10.iml
+# Datasource local storage ignored files
+/../../../../../../../:\uni\poo\lista10\.idea\.idea.lista10\.idea/dataSources/
+/dataSources.local.xml
