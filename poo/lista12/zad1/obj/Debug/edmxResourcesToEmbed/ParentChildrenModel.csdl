@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParentChildrenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Child">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <NavigationProperty Name="Parent" Relationship="Self.FK__Children__Parent__5DCAEF64" FromRole="Child" ToRole="Parent" />
+  </EntityType>
+  <EntityType Name="Parent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Child" Relationship="Self.FK__Children__Parent__5DCAEF64" FromRole="Parent" ToRole="Child" />
+  </EntityType>
+  <Association Name="FK__Children__Parent__5DCAEF64">
+    <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+    <End Role="Child" Type="Self.Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Child">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ParentChildrenContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Child" EntityType="Self.Child" />
+    <EntitySet Name="Parent" EntityType="Self.Parent" />
+    <AssociationSet Name="FK__Children__Parent__5DCAEF64" Association="Self.FK__Children__Parent__5DCAEF64">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="Child" EntitySet="Child" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
