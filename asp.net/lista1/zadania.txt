@@ -1,0 +1,8 @@
+zadanie 1 - deklaruję
+zadanie 2 - deklaruję
+zadanie 3 - deklaruję
+zadanie 4 - należało w menu 'filtrowanie żądań' dopuścić rozszerzenie '.foo', po czym powiązać z nim typ MIME, np. text/plain
+zadanie 5 - deklaruję, te i kolejne zadania w rozwiązaniu lista1
+zadanie 6 - deklaruję
+zadanie 7 - deklaruję
+zadanie 8 - deklaruję

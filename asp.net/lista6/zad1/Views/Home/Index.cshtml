@@ -1,0 +1,41 @@
+﻿@model zad1.Models.IndexModel
+@{
+    Layout = null;
+    var grid = new WebGrid(canPage: true, rowsPerPage: 10);
+    grid.Bind(source: Model.Persons.Items,
+              rowCount: Model.Persons.TotalCount, autoSortAndPage: false);
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @grid.Table(
+            columns: grid.Columns(
+                grid.Column("name", "Imię"),
+                grid.Column("surname", "Nazwisko"),
+                grid.Column(format:
+                    item =>
+                        Html.ActionLink("Edytuj", "Edit",
+                        new { id = item.Id, name = item.Name, surname = item.Surname }), canSort: false),
+                grid.Column(format:
+                    item =>
+                        Html.ActionLink("Usuń", "Delete",
+                        new { id = item.ID, name = item.Name, surname = item.Surname }), canSort: false)
+            )
+        )
+    </div>
+    <div>
+        @grid.Pager(WebGridPagerModes.All, "<<", "<", ">", ">>")
+    </div>
+    <div>
+        @Html.ActionLink("Dodaj", "Add", "Home")
+    </div>
+</body>
+</html>

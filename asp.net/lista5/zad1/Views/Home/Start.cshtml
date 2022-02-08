@@ -1,0 +1,47 @@
+﻿@model zad1.Models.StartModel
+@{
+    Layout = null;
+    ViewBag.Title = "Start";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>start</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            Imie:@Html.TextBoxFor(m => m.Imie) @Html.ValidationMessageFor(m => m.Imie)
+        </div>
+        <div>
+            Nazwisko:@Html.TextBoxFor(m => m.Nazwisko) @Html.ValidationMessageFor(m => m.Nazwisko)
+        </div>
+        <div>
+            Zajęcia:@Html.TextBoxFor(m => m.Zajecia) @Html.ValidationMessageFor(m => m.Zajecia)
+        </div>
+        <div>
+            Numer zestawu:@Html.TextBoxFor(m => m.Zestaw) @Html.ValidationMessageFor(m => m.Zestaw)
+        </div>
+        <div>
+            @for (int i = 1; i <= 10; ++i)
+            {
+            <div>
+                @Html.Raw(i):@Html.TextBoxFor(m => m.Punkty[i - 1], new { Value = 0 }) @Html.ValidationMessageFor(m => m.Punkty[i - 1])
+            </div>
+            }
+        </div>
+        <div>
+            <button>Wyślij</button>
+        </div>
+    </form>
+
+</body>
+</html>

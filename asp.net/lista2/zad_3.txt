@@ -1,0 +1,7 @@
+(a) hyperlink wysyła żądanie HTTP GET do strony docelowej, informacje o stronie źródłowej są przekazywane przez url strony docelowej
+
+(b) POST między stronami używa żądania POST, parametry z publicznych pól strony źródłowej mogą być przesyłane w ciele metody
+
+(c) analogicznie do hyperlinków, używana jest metoda GET, ale działanie na serwerze pozwala dynamicznie modyfikować docelowy URL
+
+(d) używana jest metoda POST, ale z racji tego, że transfer działa na serwerze przeglądarka nie dowiaduje się o zmianie i mimo że wyświetla docelową stronę, to może dalej pokazywać adres pierwotnej strony, ponadto obie strony muszą znajdować się w jednej aplikacji sieciowej

@@ -1,0 +1,21 @@
+﻿@model zad5.Models.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @foreach (var p in Model.Persons)
+    {
+        <div>
+            @p.Name @p.Surname
+        </div>
+    }
+</body>
+</html>

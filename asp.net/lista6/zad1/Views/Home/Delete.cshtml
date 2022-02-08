@@ -1,0 +1,22 @@
+﻿@model zad1.Models.DeleteModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            @Html.Raw($"Czy na pewno chcesz usunąć użytkownika {Model.Name} {Model.Surname}?")
+        </div>
+        <button>Tak</button>
+        <input type="button" value="Nie" onclick="location.href='@Url.Action("Index", "Home")'">
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="aspdotnet" Class="UsersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=GLADOS\SQLEXPRESS;Initial Catalog=aspdotnet;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="aspdotnetConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="lista7.[USER]" Member="USER">
+    <Type Name="USER">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nazwa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="USER_PASSWORD" Member="PASSWORD" ThisKey="id" OtherKey="userID" Type="PASSWORD" />
+    </Type>
+  </Table>
+  <Table Name="lista7.PASSWORD" Member="PASSWORD">
+    <Type Name="PASSWORD">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="password" Member="password1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="USER_PASSWORD" Member="USER" ThisKey="userID" OtherKey="id" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,10 @@
+Czym różni się wysyłanie żądania GET od POST z punktu widzenia Fiddlera?
+W zakładce 'Composer' należy wybrać jedno albo drugie.
+
+
+Jak odróżnić żądania GET od POST po stronie kodu C# w aplikacji ASP.NET?
+Typ żądania jest w polu ctx.Request.HttpMethod.
+
+
+Pokazać jak w kodzie po stronie serwera odczytać parametry przesłane przez GET a jak te przesłane przez POST.
+Rozwiązanie w pliku Handler.cs w folderze zad1.

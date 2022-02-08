@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <div>
+        <div>
+            <button id="fetchGet">GET</button>
+            <button id="fetchPost">POST</button>
+        </div>
+        <div>
+            <textarea id="resultArea" cols="80" rows="25">
+ </textarea>
+        </div>
+    </div>
+    <script>
+        var examplePerson = {
+            name: 'Bartosz',
+            surname: 'Barszczyk'
+        }
+        window.fetchGet.onclick = function () {
+            fetch('/api/persons', {
+                method: 'GET',
+                headers: {
+                    'Accept': '*/*'
+                }
+            })
+                .then((result) => {
+                    return result.text();
+                })
+                .then(function (result) {
+                    window.resultArea.innerHTML = result;
+                })
+        }
+        window.fetchPost.onclick = function () {
+            fetch('/api/persons', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(examplePerson)
+            })
+                .then(function (result) {
+                    return result.text();
+                })
+                .then(function (result) {
+                    window.resultArea.innerHTML = result;
+                });
+        };
+    </script>
+</body>
+</html>

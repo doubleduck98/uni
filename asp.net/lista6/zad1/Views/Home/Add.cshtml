@@ -1,0 +1,32 @@
+﻿@model zad1.Models.AddModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .field-validation-error {
+            color: red
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            @Html.TextBoxFor(m => m.Name) @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Surname) @Html.ValidationMessageFor(m => m.Surname)
+        </div>
+        <div>
+            <button>Dodaj</button>
+            <input type="button" value="Anuluj" onclick="location.href='@Url.Action("Index", "Home")'">
+        </div>
+    </form>
+</body>
+</html>
